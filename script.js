@@ -155,9 +155,6 @@
       "_blank"
     );
   });
-
-});
-
  
 
 document.addEventListener("DOMContentLoaded", function() {
