@@ -143,7 +143,7 @@ function sendToWhatsApp() {
   const list = selectedItems.map(p => `• ${p.name} – ₦${p.price.toLocaleString()}`).join('\n');
   const text = `Hi, I want these:\n${list}\n\nTotal: ₦${total.toLocaleString()}`;
 
-  window.open(`https://wa.me/07040363679?text=${encodeURIComponent(text)}`, '_blank');
+  window.open(`https://wa.me/2347040363679?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 document.querySelector('.cart-icon').addEventListener('click', sendToWhatsApp);
