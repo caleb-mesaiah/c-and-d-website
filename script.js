@@ -138,23 +138,27 @@
   }
 
   /* ========================
-     WHATSAPP CONTACT FORM
-  ======================== */
-  const contactForm = document.getElementById("contactForm");
+   WHATSAPP CONTACT FORM
+======================== */
+const contactForm = document.getElementById("contactForm");
 
-  contactForm?.addEventListener("submit", e => {
-    e.preventDefault();
+contactForm?.addEventListener("submit", e => {
+  e.preventDefault();
 
-    const name = document.getElementById("name")?.value || "";
-    const phone = document.getElementById("phone")?.value || "";
-    const message = document.getElementById("message")?.value || "";
+  const name = document.getElementById("name")?.value || "";
+  const phone = document.getElementById("phone")?.value || "";
+  const message = document.getElementById("message")?.value || "";
 
-    const text = `Hello, my name is ${name}. Phone: ${phone}. Message: ${message}`;
-    window.open(
-      `https://wa.me/+2347040363679?text=${encodeURIComponent(text)}`,
-      "_blank"
-    );
-  });
+  // Your WhatsApp number in international format (without the +)
+  const myNumber = "2347040363679";
+
+  const text = `Hello, my name is ${name}. Phone: ${phone}. Message: ${message}`;
+  window.open(
+    `https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`,
+    "_blank"
+  );
+});
+
  
 
 document.addEventListener("DOMContentLoaded", function() {
