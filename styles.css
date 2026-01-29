@@ -87,7 +87,6 @@ nav {
   font-size: 1.8rem;
   color: #007bff;
   cursor: pointer;
-  margin-right: -70%;
 }
 
 /* Dark mode toggle */
@@ -97,7 +96,7 @@ nav {
   font-size: 1.6rem;
   color: #fff;
   cursor: pointer;
-  margin-left: -50%;
+  margin-left: -40%;
 }
 
 /* Mobile menu */
