@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Who we are — C and D Multi-Tech. Six years, 10000+ devices, zero drama.">
+  <title>About — C and D Multi-Tech</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="header-container" style="justify-content: space-between; padding: 0.5rem 1rem;">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="C and D Multi-Tech Logo" style="height: 150px; max-width: 250px; width: auto; margin-left: zero;">
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+
+    <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+<section class="hero">
+  <h1 style="font-size:2.8rem; font-weight:900; color:#fff;">We Don't Just Fix.<br>We Revive.</h1>
+</section>
+
+<section style="padding:3rem 1rem; text-align:center;">
+  <h2 style="font-size:1.9rem; margin-bottom:2rem; color:#007bff;">Our Story</h2>
+  <p style="max-width:700px; margin:auto; font-size:1.1rem;">Six years ago, Caleb and David got fed up of Lagos slow repairs. They opened shop on Agungi-Ajiran. Same day fix. Honest quote. Zero upsell.<br><br>We’ve pulled 10000+ phones back from the dead, replaced 300+ screens, and kept 100% of our data safe. We move fast. You leave happy. That’s the only metric we track.</p>
+</section>
+
+<section id="stats-section" style="background:#f8f9fa; padding:3rem 1rem; text-align:center;">
+  <h2 style="color:#007bff;">Quick Stats</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; margin:2rem 0;">
+    <div>
+      <strong data-target="10000" class="counter" style="font-size:2.5rem; color:#007bff;">0</strong><span style="font-size:2.5rem; color:#007bff;">+</span>
+      <br>Devices Fixed
+    </div>
+    <div>
+      <strong data-target="8000" class="counter" style="font-size:2.5rem; color:#007bff;">0</strong><span style="font-size:2.5rem; color:#007bff;">+</span>
+      <br>Happy Clients
+    </div>
+    <div>
+      <strong data-target="6" class="counter" style="font-size:2.5rem; color:#007bff;">0</strong>
+      <br>Years Running
+    </div>
+    <div>
+      <strong data-target="100" class="counter" style="font-size:2.5rem; color:#007bff;">0</strong><span style="font-size:2.5rem; color:#007bff;">%</span>
+      <br>Trust
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 1rem;">
+  <h3 style="text-align:center; color:#007bff; margin-bottom:1.5rem;">Meet the Techs</h3>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
+    <div style="text-align:center; width:250px; height: 250px; ">
+      <img src="caleb.jpeg" alt="caleb" style="border-radius:30%; width:100px; height:100px; border: 5px solid #007bff; ">
+      <h4>CALEB</h4>
+      <p>Apple wizard. If it boots, he’ll break it—then fix it faster.</p>
+    </div>
+    <div style="text-align:center; max-width:250px;">
+      <img src="david.jpeg" alt="David" style="border-radius:30%; width:100px; height:100px; border: 5px solid #007bff; ">
+      <h4>DAVID</h4>
+      <p>TV whisperer. Logic board whisperer. Data savior.</p>
+    </div>
+  </div>
+</section>
+
+<section id="map" style="text-align:center; padding:2rem 0;">
+  <h3 style="color:#007bff;">We’re Here</h3>
+  <div style="margin:1rem auto; max-width:100%; overflow:hidden; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.08); border:2px solid #007bff;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.662!2d3.5301431!3d6.4406375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8ebdefb73bb9%3A0x94124eb3a0e26e35!2sElegushi%20Modern%20Plaza!5e0!3m2!1sen!2sng!4v1705970000000!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <p style="margin-top:1rem; font-size:0.95rem;">Km 15, Elegushi Plaza, Lekki - Epe Expy, Lekki 106104, Lagos</p>
+</section>
+
+<section id="contact-form" style="padding:3rem 1rem; max-width:600px; margin:auto; text-align:center;">
+  <h2 style="color:#007bff; margin-bottom:1.5rem;">Get in Touch</h2>
+  <form id="contactForm" style="display:flex; flex-direction:column; gap:1rem;">
+    <input type="text" id="name" placeholder="Your Name" style="padding:0.8rem; border:1px solid #ccc; border-radius:4px;" required>
+    <input type="tel" id="phone" placeholder="Your Phone Number" style="padding:0.8rem; border:1px solid #ccc; border-radius:4px;" required>
+    <textarea id="message" placeholder="What's wrong with your device?" style="padding:0.8rem; border:1px solid #ccc; border-radius:4px; height:100px;" required></textarea>
+    <button type="submit" style="background:#007bff; color:#fff; padding:0.8rem; border:none; border-radius:4px; cursor:pointer;">Send Message</button>
+  </form>
+</section>
+
+<a href="https://wa.me/07040363679?text=Hi%2C%20I'd%20like%20tech%20help" target="_blank" 
+   style="position:fixed; bottom:15px; right:15px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 8px rgba(0,0,0,.2); text-decoration:none; font-size:2rem; z-index:100;">
+   📲
+</a>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    const waText = `Hi, I'm ${name}, my phone is ${phone}. Message: ${message}`;
+    window.open(`https://wa.me/07040363679?text=${encodeURIComponent(waText)}`, '_blank');
+  });
+
+  // Stats counter animation
+  const counters = document.querySelectorAll('.counter');
+  const statsSection = document.getElementById('stats-section');
+
+  const countUp = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / 800; // Adjust for speed (200 steps ~2s)
+    const updateCount = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counters.forEach(counter => countUp(counter));
+        observer.unobserve(statsSection); // Run only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(statsSection);
+</script>
+</body>
+</html>

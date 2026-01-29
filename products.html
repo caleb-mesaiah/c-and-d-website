@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium devices — new, refurbished, ready to ship.">
+  <title>Products — C and D Multi-Tech</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="products-style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<header>
+  <div class="header-container" style="justify-content: space-between; padding: 0.5rem 1rem;">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="C and D Multi-Tech Logo" style="height: 150px; max-width: 250px; width: auto; margin-left: zero;">
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+
+    <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+<section class="product-hero">
+  <h1>Pick. Message. Get.</h1>
+  <p>Everything works. Everything's real.</p>
+  <div class="preview-phone">
+    <img src="phone-demo.PNG" alt="Live demo">
+  </div>
+</section>
+
+<div class="filter-bar">
+  <button data-filter="all">All</button>
+  <button data-filter="phone">Phones</button>
+  <button data-filter="laptop">Laptops</button>
+  <button data-filter="new">New</button>
+  <button data-filter="used">UK used</button>
+</div>
+
+<section class="product-grid">
+  <div class="product-card" data-type="phone" data-condition="new">
+    <img src="s23.WEBP" alt="Samsung S23">
+    <h3>Samsung S23 Ultra</h3>
+    <p>Black • 256GB • 6.8"</p>
+    <strong>₦320,000</strong>
+  </div>
+  <!-- More cards... -->
+</section>
+
+
+
+<a href="#cart" class="cart-icon" aria-label="View cart"> <span class="cart-count">0</span>
+  <svg viewBox="0 0 32 32" width="40" height="40">
+    <path fill="#00ffff" stroke="#fff" stroke-width="1" 
+      d="M5,7 L6,20 C6,22 20,22 20,20 L21,7 L25,2 L6,2 Z M12,27 C12,28.5 13.5,30 15,30 C16.5,30 18,28.5 18,27 C18,25.5 16.5,24 15,24 C13.5,24 12,25.5 12,27 Z M20,27 C20,28.5 21.5,30 23,30 C24.5,30 26,28.5 26,27 C26,25.5 24.5,24 23,24 C21.5,24 20,25.5 20,27 Z"/>
+  </svg>
+</a>
+
+<!-- Total Button – Bottom-right -->
+<div class="total-btn">₦0</div>
+
+
+<!-- Intro Sound – plays only once per session -->
+<audio id="introSound" preload="auto">
+  <source src="intro.mpeg" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if sound has already played in this session
+    if (sessionStorage.getItem('introPlayed') === 'true') {
+      return; // already played → skip
+    }
+
+    const audio = document.getElementById('introSound');
+    audio.volume = 0.4; // 40% volume – adjust if needed
+
+    // Try to play
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        sessionStorage.setItem('introPlayed', 'true'); // mark as played
+        console.log("Intro sound played once");
+      }).catch(error => {
+        console.log("Autoplay blocked:", error);
+        // Fallback: play on first user click anywhere
+        document.body.addEventListener('click', function playOnce() {
+          audio.play().then(() => {
+            sessionStorage.setItem('introPlayed', 'true');
+          }).catch(e => console.log("Fallback failed:", e));
+          document.body.removeEventListener('click', playOnce);
+        }, { once: true });
+      });
+    }
+  });
+</script>
+<script src="script.js"></script>
+<script src="products-script.js"></script>
+
+</body>
+</html>
