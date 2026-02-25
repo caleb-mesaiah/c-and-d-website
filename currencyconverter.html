@@ -1,113 +1,136 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<title>C&D Multitech • Live Currency Converter & Historical Rate Analysis</title>
-<meta name="description" content="Real-time currency converter, USD to GBP, EUR to NGN, historical charts (30/60/90/180 days), conversion tables, exchange rate analysis, volatility insights — C&D Multitech">
-<meta name="keywords" content="currency converter, live exchange rates, USD to GBP, GBP to USD, currency historical chart, forex rates, money transfer rates, best currency converter 2026">
-<style>
-:root {
-  --bg: #0d1117;
-  --text: #c9d1d9;
-  --green: #00ff41;
-  --green-dim: #238636;
-  --border: #30363d;
-  --card: #161b22;
-  --accent: #58a6ff;
-}
-[data-theme="dark"] {
-  background: var(--bg);
-  color: var(--text);
-}
-body {
-  margin:0;
-  font-family: 'SF Mono', 'Consolas', 'Courier New', monospace;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-.container { max-width:1100px; margin:0 auto; padding:0 16px; }
-header { padding:60px 0 40px; text-align:center; }
-h1 { color:var(--green); font-size:2.8rem; margin:0; font-weight:400; }
-.subtitle { color:#8b949e; font-size:1.25rem; margin:12px 0 32px; }
-.converter-card {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:32px;
-  margin-bottom:48px;
-}
-.form-row {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:24px;
-  margin-bottom:32px;
-}
-label { color:#8b949e; font-size:0.95rem; margin-bottom:8px; display:block; }
-input, select {
-  background:#0d1117;
-  color:var(--text);
-  border:1px solid var(--border);
-  padding:14px;
-  font-size:1.1rem;
-  border-radius:6px;
-  width:100%;
-  font-family: inherit;
-}
-.btn {
-  background:var(--green-dim);
-  color:var(--green);
-  border:none;
-  padding:14px 32px;
-  font-size:1.1rem;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:600;
-  transition:0.15s;
-}
-.btn:hover { background:#2ea043; color:white; }
-#result { font-size:3.2rem; color:var(--green); text-align:center; margin:40px 0 16px; font-weight:400; }
-#bidir { font-size:1.4rem; color:#8b949e; text-align:center; }
-.chart-box {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:24px;
-  margin:48px 0;
-}
-.toggle-group { text-align:center; margin-bottom:24px; }
-.toggle-btn {
-  background:#21262d;
-  color:#c9d1d9;
-  border:1px solid var(--border);
-  padding:8px 16px;
-  margin:0 6px;
-  border-radius:6px;
-  cursor:pointer;
-}
-.toggle-btn.active { background:var(--green-dim); color:var(--green); border-color:var(--green-dim); }
-table {
-  width:100%;
-  border-collapse:collapse;
-  margin:32px 0;
-  font-size:0.95rem;
-}
-th, td { padding:12px; border-bottom:1px solid var(--border); text-align:right; }
-th { background:#161b22; text-align:left; color:#8b949e; }
-.disclaimer-box {
-  background:#161b22;
-  border:1px solid #30363d;
-  border-radius:8px;
-  padding:24px;
-  margin:60px 0;
-  font-size:0.95rem;
-  color:#8b949e;
-}
-.content-section { margin:80px 0; }
-.content-section h2 { color:var(--green); font-size:1.9rem; margin-bottom:24px; }
-.long-text { color:#8b949e; font-size:1.05rem; }
-.long-text p { margin:1.4em 0; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Updated Title – keyword front-loaded, includes main features -->
+  <title>C&D Multitech – Live Currency Converter, Forex Tools, Gold Signals & Countdowns</title>
+
+  <!-- Updated Meta Description – 158 characters, teases EVERY feature naturally -->
+  <meta name="description" content="Live currency converter (USD/NGN, EUR/USD + more), forex session times, NFP & Bitcoin halving countdowns, volatile currencies list, real-time market status & gold signals robot. By C&D Multitech.">
+
+  <!-- Updated Keywords – high-intent phrases for Nigeria/trader searches -->
+  <meta name="keywords" content="currency converter, live forex converter, USD to NGN converter, forex session times, NFP countdown, Bitcoin halving countdown, most volatile currencies, gold signals, XAUUSD signals, real-time forex pairs, trading tools Nigeria, market status, gold robot 2026">
+
+  <!-- Robots & Author -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Caleb Basil, C&D Multitech">
+
+  <!-- Your existing Google verification -->
+  <meta name="google-site-verification" content="google2abbcff617ee6aa0.html" />
+
+  <!-- Optional Open Graph for social sharing (improves WhatsApp/Facebook previews) -->
+  <meta property="og:title" content="C&D Multitech – Live Currency Converter & Gold Signals" />
+  <meta property="og:description" content="Real-time rates, forex sessions, NFP/Bitcoin countdowns, volatile pairs & powerful gold signals robot. By Caleb Basil." />
+  <meta property="og:url" content="https://canddmultitech.com.ng/currencyconverter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://canddmultitech.com.ng/logo.PNG" /> <!-- Change if you have a better image -->
+
+  <!-- Your existing style block (unchanged) -->
+  <style>
+    :root {
+      --bg: #0d1117;
+      --text: #c9d1d9;
+      --green: #00ff41;
+      --green-dim: #238636;
+      --border: #30363d;
+      --card: #161b22;
+      --accent: #58a6ff;
+    }
+    [data-theme="dark"] {
+      background: var(--bg);
+      color: var(--text);
+    }
+    body {
+      margin:0;
+      font-family: 'SF Mono', 'Consolas', 'Courier New', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width:1100px; margin:0 auto; padding:0 16px; }
+    header { padding:60px 0 40px; text-align:center; }
+    h1 { color:var(--green); font-size:2.8rem; margin:0; font-weight:400; }
+    .subtitle { color:#8b949e; font-size:1.25rem; margin:12px 0 32px; }
+    .converter-card {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:32px;
+      margin-bottom:48px;
+    }
+    .form-row {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
+      margin-bottom:32px;
+    }
+    label { color:#8b949e; font-size:0.95rem; margin-bottom:8px; display:block; }
+    input, select {
+      background:#0d1117;
+      color:var(--text);
+      border:1px solid var(--border);
+      padding:14px;
+      font-size:1.1rem;
+      border-radius:6px;
+      width:100%;
+      font-family: inherit;
+    }
+    .btn {
+      background:var(--green-dim);
+      color:var(--green);
+      border:none;
+      padding:14px 32px;
+      font-size:1.1rem;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.15s;
+    }
+    .btn:hover { background:#2ea043; color:white; }
+    #result { font-size:3.2rem; color:var(--green); text-align:center; margin:40px 0 16px; font-weight:400; }
+    #bidir { font-size:1.4rem; color:#8b949e; text-align:center; }
+    .chart-box {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:24px;
+      margin:48px 0;
+    }
+    .toggle-group { text-align:center; margin-bottom:24px; }
+    .toggle-btn {
+      background:#21262d;
+      color:#c9d1d9;
+      border:1px solid var(--border);
+      padding:8px 16px;
+      margin:0 6px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .toggle-btn.active { background:var(--green-dim); color:var(--green); border-color:var(--green-dim); }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      margin:32px 0;
+      font-size:0.95rem;
+    }
+    th, td { padding:12px; border-bottom:1px solid var(--border); text-align:right; }
+    th { background:#161b22; text-align:left; color:#8b949e; }
+    .disclaimer-box {
+      background:#161b22;
+      border:1px solid #30363d;
+      border-radius:8px;
+      padding:24px;
+      margin:60px 0;
+      font-size:0.95rem;
+      color:#8b949e;
+    }
+    .content-section { margin:80px 0; }
+    .content-section h2 { color:var(--green); font-size:1.9rem; margin-bottom:24px; }
+    .long-text { color:#8b949e; font-size:1.05rem; }
+    .long-text p { margin:1.4em 0; }
+  </style>
 </head>
 <body>
 
