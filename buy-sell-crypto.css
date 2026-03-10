@@ -1,0 +1,20 @@
+/* Custom styles beyond Tailwind */
+
+:root {
+  --primary: #10b981;
+}
+
+/* Focus enhancement */
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+}
+
+/* Smooth transitions */
+button {
+  transition: all 0.2s ease;
+}
+
+.hidden {
+  display: none !important;
+}
