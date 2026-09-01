@@ -307,21 +307,18 @@
 
 .nav-toggle {
   display: none;
-
   width: 42px;
   height: 42px;
-
-  border: none;
-
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.22);
   border-radius: 10px;
-
   background: rgba(255,255,255,0.12);
-
-  color: white;
-
+  color: #ffffff;
   font-size: 1.3rem;
-
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 
@@ -390,14 +387,19 @@
 
 
   .main-nav {
-    flex: 0;
-    margin-left: auto;
-  }
+  flex: 0 0 auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
 
 
   .nav-toggle {
-    display: block;
-  }
+  display: flex;
+  position: relative;
+  margin: 0;
+  flex-shrink: 0;
+}
 
 
   .nav-links {
