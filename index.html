@@ -56,20 +56,28 @@
 
 
 
-```html
+
+
 <!-- =========================================================
-     C&D MULTITECH — PREMIUM HEADER
-     Fully isolated CSS to prevent conflicts with the website
+     C&D MULTITECH — PREMIUM BLUE GLASS HEADER
+     Conflict-Proof + Working Dark Mode
 ========================================================= -->
 
 <header class="cnd-header">
 
   <div class="cnd-header-inner">
 
-    <!-- BRAND -->
+    <!-- C&D MULTITECH BRAND -->
     <a href="index.html" class="cnd-brand">
-      <span class="cnd-brand-main">C and D</span>
-      <span class="cnd-brand-sub">Multitech</span>
+
+      <span class="cnd-brand-main">
+        C and D
+      </span>
+
+      <span class="cnd-brand-sub">
+        Multitech
+      </span>
+
     </a>
 
 
@@ -109,11 +117,11 @@
       </ul>
 
 
-      <!-- MOBILE MENU BUTTON -->
+      <!-- MOBILE MENU -->
       <button
         type="button"
         class="cnd-menu-toggle"
-        aria-label="Open navigation menu"
+        aria-label="Open menu"
         aria-expanded="false"
       >
         <span></span>
@@ -142,21 +150,20 @@
 <style>
 
 /* =========================================================
-   C&D MULTITECH HEADER
-   ALL CLASSES ARE UNIQUE TO PREVENT CSS CONFLICTS
+   PREMIUM BLUE GLASS HEADER
+   ALL CLASSES ARE UNIQUE TO PREVENT WEBSITE CONFLICTS
 ========================================================= */
-
-
-/* ---------- HEADER ---------- */
 
 .cnd-header {
 
   position: sticky;
+
   top: 12px;
 
   z-index: 99999;
 
   width: calc(100% - 24px);
+
   max-width: 1450px;
 
   margin: 12px auto 0;
@@ -166,34 +173,37 @@
   background:
     linear-gradient(
       135deg,
-      rgba(0, 72, 180, 0.96),
-      rgba(0, 120, 255, 0.88),
-      rgba(0, 61, 150, 0.96)
+      rgba(0, 91, 210, 0.94),
+      rgba(0, 119, 255, 0.82),
+      rgba(0, 67, 160, 0.94)
     );
 
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(20px);
 
-  border: 1px solid rgba(255,255,255,0.20);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.22);
 
   border-radius: 20px;
 
   box-shadow:
-    0 14px 40px rgba(0,0,0,0.25),
-    inset 0 1px 0 rgba(255,255,255,0.20);
+    0 12px 35px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.25);
 
 }
 
 
-/* ---------- HEADER INNER ---------- */
+/* =========================================================
+   HEADER INNER
+========================================================= */
 
 .cnd-header-inner {
 
-  width: 100%;
-
   min-height: 82px;
 
-  padding: 7px 16px;
+  width: 100%;
+
+  padding: 7px 18px;
 
   box-sizing: border-box;
 
@@ -201,13 +211,14 @@
 
   align-items: center;
 
-  gap: 18px;
+  gap: 20px;
 
 }
 
 
 /* =========================================================
-   BRAND
+   C&D MULTITECH BRAND
+   EXACT FONT STYLE FROM YOUR ORIGINAL CODE
 ========================================================= */
 
 .cnd-brand {
@@ -230,17 +241,28 @@
 
   flex-shrink: 0;
 
+  transition: transform 0.25s ease;
+
 }
 
+
+.cnd-brand:hover {
+
+  transform: scale(1.03);
+
+}
+
+
+/* BIG C AND D */
 
 .cnd-brand-main {
 
   font-family:
+    "Trebuchet MS",
     Arial,
-    Helvetica,
     sans-serif;
 
-  font-size: 2.55rem;
+  font-size: 2.65rem;
 
   font-weight: 900;
 
@@ -258,16 +280,18 @@
 }
 
 
+/* MULTITECH */
+
 .cnd-brand-sub {
 
   margin-top: 7px;
 
   font-family:
+    "Trebuchet MS",
     Arial,
-    Helvetica,
     sans-serif;
 
-  font-size: 0.82rem;
+  font-size: 0.85rem;
 
   font-weight: 700;
 
@@ -275,9 +299,12 @@
 
   color: #f5d36b;
 
+  line-height: 1;
+
   white-space: nowrap;
 
-  line-height: 1;
+  text-shadow:
+    0 2px 5px rgba(0,0,0,0.25);
 
 }
 
@@ -300,8 +327,6 @@
 
 }
 
-
-/* NAV LIST */
 
 .cnd-nav-links {
 
@@ -330,8 +355,6 @@
 
 }
 
-
-/* NAV LINKS */
 
 .cnd-nav-links a {
 
@@ -367,7 +390,8 @@
 
 .cnd-nav-links a:hover {
 
-  background: rgba(255,255,255,0.13);
+  background:
+    rgba(255,255,255,0.13);
 
   color: #f5d36b;
 
@@ -394,7 +418,8 @@
 
   border: 1px solid rgba(255,255,255,0.25);
 
-  background: rgba(255,255,255,0.10);
+  background:
+    rgba(255,255,255,0.10);
 
   color: #ffffff;
 
@@ -408,12 +433,19 @@
 
   font-size: 1rem;
 
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
 }
 
 
 .cnd-mode-toggle:hover {
 
-  background: rgba(255,255,255,0.20);
+  background:
+    rgba(255,255,255,0.20);
+
+  transform: rotate(15deg);
 
 }
 
@@ -440,7 +472,8 @@
 
   border-radius: 10px;
 
-  background: rgba(255,255,255,0.10);
+  background:
+    rgba(255,255,255,0.10);
 
   cursor: pointer;
 
@@ -500,23 +533,14 @@
 
   .cnd-brand-main {
 
-    font-size: 2.15rem;
+    font-size: 2.2rem;
 
   }
 
 
   .cnd-brand-sub {
 
-    font-size: 0.70rem;
-
-    letter-spacing: 2.5px;
-
-  }
-
-
-  .cnd-nav-links {
-
-    gap: 0;
+    font-size: 0.72rem;
 
   }
 
@@ -575,21 +599,21 @@
 
   .cnd-brand-main {
 
-    font-size: 1.95rem;
+    font-size: 2rem;
 
   }
 
 
   .cnd-brand-sub {
 
-    font-size: 0.65rem;
+    font-size: 0.67rem;
 
-    letter-spacing: 2.3px;
+    letter-spacing: 2.5px;
 
   }
 
 
-  /* NAVIGATION CONTAINER */
+  /* NAVIGATION */
 
   .cnd-navigation {
 
@@ -606,7 +630,20 @@
   }
 
 
-  /* HIDE DESKTOP LINKS */
+  /* MOBILE BUTTON */
+
+  .cnd-menu-toggle {
+
+    display: flex;
+
+    position: relative;
+
+    z-index: 100001;
+
+  }
+
+
+  /* MOBILE DROPDOWN */
 
   .cnd-nav-links {
 
@@ -622,7 +659,7 @@
 
     width: 230px;
 
-    max-width: calc(100vw - 32px);
+    max-width: calc(100vw - 24px);
 
     box-sizing: border-box;
 
@@ -639,27 +676,25 @@
     background:
       linear-gradient(
         145deg,
-        rgba(0,72,180,0.98),
+        rgba(0,65,155,0.98),
         rgba(0,105,220,0.97)
       );
 
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(20px);
 
-    -webkit-backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(20px);
 
     border: 1px solid rgba(255,255,255,0.18);
 
-    border-radius: 14px;
+    border-radius: 15px;
 
     box-shadow:
-      0 18px 40px rgba(0,0,0,0.30);
+      0 15px 35px rgba(0,0,0,0.30);
 
     z-index: 100000;
 
   }
 
-
-  /* OPEN MENU */
 
   .cnd-nav-links.cnd-active {
 
@@ -667,8 +702,6 @@
 
   }
 
-
-  /* MOBILE LINKS */
 
   .cnd-nav-links li {
 
@@ -681,35 +714,22 @@
 
     width: 100%;
 
-    padding: 12px 14px;
+    box-sizing: border-box;
+
+    padding: 12px 15px;
 
     text-align: left;
 
-    font-size: 0.88rem;
+    font-size: 0.9rem;
 
     font-weight: 700;
 
     border-radius: 8px;
 
-    box-sizing: border-box;
-
   }
 
 
-  /* MENU BUTTON */
-
-  .cnd-menu-toggle {
-
-    display: flex;
-
-    position: relative;
-
-    z-index: 100001;
-
-  }
-
-
-  /* MODE BUTTON */
+  /* DARK MODE */
 
   .cnd-mode-toggle {
 
@@ -754,16 +774,16 @@
 
   .cnd-brand-main {
 
-    font-size: 1.70rem;
+    font-size: 1.75rem;
 
   }
 
 
   .cnd-brand-sub {
 
-    font-size: 0.56rem;
+    font-size: 0.58rem;
 
-    letter-spacing: 1.8px;
+    letter-spacing: 2px;
 
   }
 
@@ -806,10 +826,14 @@
 <script>
 
 /* =========================================================
-   C&D MULTITECH MOBILE NAVIGATION
+   C&D MULTITECH HEADER JAVASCRIPT
 ========================================================= */
 
 (function () {
+
+  /* -----------------------------------------
+     MOBILE MENU
+  ----------------------------------------- */
 
   const menuButton =
     document.querySelector(".cnd-menu-toggle");
@@ -818,33 +842,50 @@
     document.querySelector(".cnd-nav-links");
 
 
-  if (!menuButton || !navigation) {
-    return;
-  }
+  if (menuButton && navigation) {
+
+    menuButton.addEventListener("click", function (event) {
+
+      event.stopPropagation();
+
+      const isOpen =
+        navigation.classList.toggle("cnd-active");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+    });
 
 
-  menuButton.addEventListener("click", function (event) {
+    /* CLOSE AFTER CLICKING LINK */
 
-    event.stopPropagation();
+    navigation
+      .querySelectorAll("a")
+      .forEach(function (link) {
 
-    const isOpen =
-      navigation.classList.toggle("cnd-active");
+        link.addEventListener("click", function () {
 
-    menuButton.setAttribute(
-      "aria-expanded",
-      isOpen ? "true" : "false"
-    );
+          navigation.classList.remove("cnd-active");
 
-  });
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
 
 
-  /* CLOSE AFTER CLICKING A LINK */
+    /* CLOSE WHEN CLICKING OUTSIDE */
 
-  navigation
-    .querySelectorAll("a")
-    .forEach(function (link) {
+    document.addEventListener("click", function (event) {
 
-      link.addEventListener("click", function () {
+      if (
+        !event.target.closest(".cnd-navigation")
+      ) {
 
         navigation.classList.remove("cnd-active");
 
@@ -853,34 +894,108 @@
           "false"
         );
 
-      });
+      }
 
     });
 
+  }
 
-  /* CLOSE WHEN CLICKING OUTSIDE */
 
-  document.addEventListener("click", function (event) {
+  /* -----------------------------------------
+     DARK MODE
+  ----------------------------------------- */
 
-    if (
-      !event.target.closest(".cnd-navigation")
-    ) {
+  const modeButton =
+    document.getElementById("cnd-mode-toggle");
 
-      navigation.classList.remove("cnd-active");
 
-      menuButton.setAttribute(
-        "aria-expanded",
-        "false"
+  if (modeButton) {
+
+    /* Check previously saved preference */
+
+    const savedMode =
+      localStorage.getItem("cnd-dark-mode");
+
+
+    if (savedMode === "true") {
+
+      document.documentElement.classList.add(
+        "cnd-dark-mode"
       );
+
+      modeButton.textContent = "☀️";
 
     }
 
-  });
+
+    modeButton.addEventListener("click", function () {
+
+      const darkMode =
+        document.documentElement.classList.toggle(
+          "cnd-dark-mode"
+        );
+
+
+      localStorage.setItem(
+        "cnd-dark-mode",
+        darkMode
+      );
+
+
+      modeButton.textContent =
+        darkMode ? "☀️" : "🌙";
+
+    });
+
+  }
 
 })();
 
 </script>
-```
+
+
+<style>
+
+/* =========================================================
+   DARK MODE
+   Only affects the page when the toggle is activated.
+========================================================= */
+
+html.cnd-dark-mode {
+
+  background: #07111f;
+
+  color-scheme: dark;
+
+}
+
+
+/* Smooth transition for common page elements */
+
+html.cnd-dark-mode body {
+
+  background: #07111f;
+
+  color: #ffffff;
+
+}
+
+
+/* Header becomes slightly deeper blue */
+
+html.cnd-dark-mode .cnd-header {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,48,130,0.97),
+      rgba(0,82,190,0.94),
+      rgba(0,38,100,0.97)
+    );
+
+}
+
+</style>
 
 
 
