@@ -37,100 +37,1246 @@
   </div>
 </header>
 
-<section class="hero">
-  <h1 style="font-size:2.8rem; font-weight:900; color:#fff;">Got Questions?<br>We've Got Answers.</h1>
+<style>
+/* =========================================================
+   C&D MULTITECH — MODERN FAQ SECTION
+   Paste inside your existing <body>
+   ========================================================= */
+
+.cd-faq-page {
+    --faq-primary: #0b5cff;
+    --faq-primary-dark: #0647c7;
+    --faq-text: #111827;
+    --faq-muted: #6b7280;
+    --faq-border: #e5e7eb;
+    --faq-bg: #f6f8fc;
+    --faq-card: #ffffff;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 20px 90px;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(11, 92, 255, 0.08), transparent 28%),
+        radial-gradient(circle at 90% 30%, rgba(11, 92, 255, 0.06), transparent 30%),
+        var(--faq-bg);
+    color: var(--faq-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cd-faq-page *,
+.cd-faq-page *::before,
+.cd-faq-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.cd-faq-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.cd-faq-intro {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.cd-faq-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    background: rgba(11, 92, 255, 0.09);
+    color: var(--faq-primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.cd-faq-badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--faq-primary);
+    display: inline-block;
+}
+
+.cd-faq-intro h1 {
+    margin: 0;
+    font-size: clamp(34px, 6vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.cd-faq-intro h1 strong {
+    color: var(--faq-primary);
+}
+
+.cd-faq-intro p {
+    margin: 20px auto 0;
+    max-width: 650px;
+    color: var(--faq-muted);
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.cd-faq-search {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    position: relative;
+}
+
+.cd-faq-search input {
+    width: 100%;
+    height: 62px;
+    padding: 0 55px 0 22px;
+    border: 1px solid var(--faq-border);
+    border-radius: 18px;
+    outline: none;
+    background: #fff;
+    color: var(--faq-text);
+    font-size: 16px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+    transition: 0.25s ease;
+}
+
+.cd-faq-search input:focus {
+    border-color: var(--faq-primary);
+    box-shadow: 0 12px 35px rgba(11, 92, 255, 0.12);
+}
+
+.cd-faq-search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: var(--faq-primary);
+}
+
+
+/* =========================================================
+   CATEGORY FILTERS
+   ========================================================= */
+
+.cd-faq-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.cd-faq-category {
+    border: 1px solid var(--faq-border);
+    background: #fff;
+    color: #4b5563;
+    padding: 10px 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.cd-faq-category:hover {
+    border-color: var(--faq-primary);
+    color: var(--faq-primary);
+    transform: translateY(-2px);
+}
+
+.cd-faq-category.active {
+    background: var(--faq-primary);
+    border-color: var(--faq-primary);
+    color: #fff;
+}
+
+
+/* =========================================================
+   FAQ GRID
+   ========================================================= */
+
+.cd-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+
+/* =========================================================
+   FAQ CARD
+   ========================================================= */
+
+.cd-faq-item {
+    background: var(--faq-card);
+    border: 1px solid var(--faq-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.cd-faq-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(11, 92, 255, 0.25);
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.cd-faq-question {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 23px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+    cursor: pointer;
+    color: var(--faq-text);
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.cd-faq-question:hover {
+    color: var(--faq-primary);
+}
+
+.cd-faq-question-text {
+    flex: 1;
+}
+
+.cd-faq-number {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: #f0f5ff;
+    color: var(--faq-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.cd-faq-arrow {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f5f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    font-size: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cd-faq-item.open .cd-faq-arrow {
+    transform: rotate(45deg);
+    background: var(--faq-primary);
+    color: #fff;
+}
+
+.cd-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.cd-faq-answer-inner {
+    padding: 0 24px 24px;
+    color: var(--faq-muted);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.cd-faq-answer-inner strong {
+    color: var(--faq-text);
+}
+
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+.cd-faq-no-results {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    border: 1px solid var(--faq-border);
+    border-radius: 20px;
+    color: var(--faq-muted);
+}
+
+.cd-faq-no-results.show {
+    display: block;
+}
+
+.cd-faq-no-results-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.cd-faq-no-results h3 {
+    margin: 0 0 8px;
+    color: var(--faq-text);
+}
+
+
+/* =========================================================
+   CONTACT CTA
+   ========================================================= */
+
+.cd-faq-contact {
+    margin-top: 60px;
+    padding: 45px 30px;
+    border-radius: 28px;
+    text-align: center;
+    color: #fff;
+    background:
+        linear-gradient(
+            135deg,
+            #0b5cff 0%,
+            #0647c7 100%
+        );
+    box-shadow: 0 25px 60px rgba(11, 92, 255, 0.22);
+    position: relative;
+    overflow: hidden;
+}
+
+.cd-faq-contact::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    top: -120px;
+    right: -70px;
+}
+
+.cd-faq-contact::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    bottom: -100px;
+    left: -50px;
+}
+
+.cd-faq-contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cd-faq-contact h2 {
+    margin: 0;
+    font-size: clamp(26px, 5vw, 40px);
+    line-height: 1.2;
+}
+
+.cd-faq-contact p {
+    max-width: 600px;
+    margin: 15px auto 25px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.cd-faq-contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cd-faq-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+.cd-faq-btn-primary {
+    background: #fff;
+    color: var(--faq-primary);
+}
+
+.cd-faq-btn-primary:hover {
+    transform: translateY(-2px);
+    background: #f3f6ff;
+}
+
+.cd-faq-btn-outline {
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    background: rgba(255,255,255,0.08);
+}
+
+.cd-faq-btn-outline:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .cd-faq-page {
+        padding: 45px 14px 60px;
+    }
+
+    .cd-faq-intro {
+        margin-bottom: 30px;
+    }
+
+    .cd-faq-intro h1 {
+        letter-spacing: -1px;
+    }
+
+    .cd-faq-intro p {
+        line-height: 1.65;
+    }
+
+    .cd-faq-search input {
+        height: 56px;
+        border-radius: 15px;
+    }
+
+    .cd-faq-categories {
+        gap: 7px;
+        margin-bottom: 30px;
+    }
+
+    .cd-faq-category {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+    .cd-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .cd-faq-item {
+        border-radius: 16px;
+    }
+
+    .cd-faq-question {
+        padding: 18px 16px;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .cd-faq-number {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        font-size: 11px;
+    }
+
+    .cd-faq-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .cd-faq-answer-inner {
+        padding: 0 16px 19px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cd-faq-contact {
+        margin-top: 40px;
+        padding: 35px 20px;
+        border-radius: 22px;
+    }
+
+    .cd-faq-contact-buttons {
+        flex-direction: column;
+    }
+
+    .cd-faq-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .cd-faq-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cd-faq-intro h1 {
+        font-size: 31px;
+    }
+
+    .cd-faq-category {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
+}
+</style>
+
+
+<section class="cd-faq-page">
+
+    <div class="cd-faq-container">
+
+        <!-- INTRO -->
+
+        <div class="cd-faq-intro">
+
+            <div class="cd-faq-badge">
+                <span></span>
+                C&amp;D MULTITECH SUPPORT
+            </div>
+
+            <h1>
+                Questions?<br>
+                <strong>We've Got Answers.</strong>
+            </h1>
+
+            <p>
+                Everything you need to know about our repairs, devices,
+                parts, pricing, warranty, data protection, and technical
+                services.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="cd-faq-search">
+
+            <input
+                type="text"
+                id="cdFaqSearch"
+                placeholder="Search your question..."
+                autocomplete="off"
+            >
+
+            <div class="cd-faq-search-icon">
+                🔍
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY FILTER -->
+
+        <div class="cd-faq-categories">
+
+            <button class="cd-faq-category active" data-category="all">
+                All Questions
+            </button>
+
+            <button class="cd-faq-category" data-category="repair">
+                Repairs
+            </button>
+
+            <button class="cd-faq-category" data-category="devices">
+                Devices
+            </button>
+
+            <button class="cd-faq-category" data-category="payment">
+                Pricing &amp; Payment
+            </button>
+
+            <button class="cd-faq-category" data-category="service">
+                Service
+            </button>
+
+        </div>
+
+
+        <!-- FAQ GRID -->
+
+        <div class="cd-faq-grid" id="cdFaqGrid">
+
+
+            <!-- 01 -->
+
+            <div class="cd-faq-item" data-category="repair">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">01</span>
+
+                    <span class="cd-faq-question-text">
+                        How long do repairs take?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Most repairs are completed the same day.
+                        Screen and software repairs can take up to
+                        <strong>six hours</strong>, while motherboard
+                        repairs may take up to <strong>24 hours</strong>.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="cd-faq-item" data-category="devices">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">02</span>
+
+                    <span class="cd-faq-question-text">
+                        Do you fix every brand?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Yes. We work on a wide range of devices and brands,
+                        including <strong>Samsung, Nokia, Mac, Dell</strong>,
+                        and many other phones and computers.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="cd-faq-item" data-category="repair">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">03</span>
+
+                    <span class="cd-faq-question-text">
+                        Are your replacement parts genuine?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        We use <strong>OEM or grade-A replacement parts</strong>
+                        and avoid low-quality knock-offs. Repairs are also
+                        covered by the applicable warranty.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="cd-faq-item" data-category="payment">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">04</span>
+
+                    <span class="cd-faq-question-text">
+                        How does your pricing work?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        You receive a <strong>quote before the repair</strong>
+                        and payment is made after the service. This keeps
+                        the process transparent with no unexpected charges.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="cd-faq-item" data-category="service">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">05</span>
+
+                    <span class="cd-faq-question-text">
+                        I am outside Lekki. Can I send my device?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Yes. Pick-up and drop-off can be arranged through
+                        <strong>GIG or another courier service</strong>
+                        for customers within Lagos.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="cd-faq-item" data-category="service">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">06</span>
+
+                    <span class="cd-faq-question-text">
+                        Is my data safe during a repair?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        We take data privacy seriously. We can back up your
+                        information and will only wipe data when you
+                        authorize it.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 07 -->
+
+            <div class="cd-faq-item" data-category="service">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">07</span>
+
+                    <span class="cd-faq-question-text">
+                        Can I watch while my device is being repaired?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Yes. Our repair setup allows customers to sit nearby
+                        and watch the repair process through the
+                        <strong>glass counter</strong>.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 08 -->
+
+            <div class="cd-faq-item" data-category="repair">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">08</span>
+
+                    <span class="cd-faq-question-text">
+                        Can you repair water-damaged phones?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Yes. Water-damaged devices can undergo cleaning,
+                        inspection, and logic-board assessment. Results depend
+                        on the condition and extent of the damage.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 09 -->
+
+            <div class="cd-faq-item" data-category="devices">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">09</span>
+
+                    <span class="cd-faq-question-text">
+                        Do you sell refurbished devices?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Yes. We offer refurbished devices that are tested
+                        before being made available to customers.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 10 -->
+
+            <div class="cd-faq-item" data-category="payment">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">10</span>
+
+                    <span class="cd-faq-question-text">
+                        What payment methods do you accept?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        We accept <strong>POS, bank transfer, and cash</strong>
+                        payments.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 11 -->
+
+            <div class="cd-faq-item" data-category="repair">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">11</span>
+
+                    <span class="cd-faq-question-text">
+                        My phone glass is broken but the display still works. Do I need a full screen?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Not necessarily. If the display itself is working
+                        correctly, a <strong>glass-only replacement</strong>
+                        may be possible and can cost less than replacing
+                        the entire screen assembly.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 12 -->
+
+            <div class="cd-faq-item" data-category="service">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">12</span>
+
+                    <span class="cd-faq-question-text">
+                        Where can I find your repair location?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Our current location is at
+                        <strong>Km 15, Elegushi Plaza, Lekki-Epe Expressway,
+                        Lekki, Lagos</strong>.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 13 -->
+
+            <div class="cd-faq-item" data-category="repair">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">13</span>
+
+                    <span class="cd-faq-question-text">
+                        What happens if my device develops the same problem after repair?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Repairs have a <strong>seven-day turnaround
+                        warranty</strong>. If the same issue returns within
+                        the applicable warranty period and it was not caused
+                        by user damage, it can be handled without an additional
+                        repair charge.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 14 -->
+
+            <div class="cd-faq-item" data-category="repair">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">14</span>
+
+                    <span class="cd-faq-question-text">
+                        Can you fix a laptop that is overheating?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        Yes. Depending on the cause, the service may include
+                        <strong>thermal paste replacement, fan cleaning,
+                        and dust removal</strong>.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 15 -->
+
+            <div class="cd-faq-item" data-category="devices">
+
+                <button class="cd-faq-question">
+
+                    <span class="cd-faq-number">15</span>
+
+                    <span class="cd-faq-question-text">
+                        I forgot the password on an old Android phone. Can you help?
+                    </span>
+
+                    <span class="cd-faq-arrow">+</span>
+
+                </button>
+
+                <div class="cd-faq-answer">
+                    <div class="cd-faq-answer-inner">
+                        We can assist with eligible Android software and
+                        account-lock issues. The exact process depends on
+                        the device and ownership verification.
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- NO SEARCH RESULTS -->
+
+        <div class="cd-faq-no-results" id="cdFaqNoResults">
+
+            <div class="cd-faq-no-results-icon">
+                🔎
+            </div>
+
+            <h3>No matching question found</h3>
+
+            <p>
+                Try another search term or contact C&amp;D Multitech directly.
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT CTA -->
+
+        <div class="cd-faq-contact">
+
+            <div class="cd-faq-contact-content">
+
+                <h2>
+                    Still have a question?
+                </h2>
+
+                <p>
+                    If you couldn't find the answer you're looking for,
+                    our team is ready to help you with your device or
+                    technical problem.
+                </p>
+
+                <div class="cd-faq-contact-buttons">
+
+                    <a
+                        href="https://wa.me/2347040363679"
+                        class="cd-faq-btn cd-faq-btn-primary"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        💬 Chat on WhatsApp
+                    </a>
+
+                    <a
+                        href="mailto:canddmultitech@gmail.com"
+                        class="cd-faq-btn cd-faq-btn-outline"
+                    >
+                        ✉ Send an Email
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section style="padding:3rem 1rem; max-width:900px; margin:auto;">
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">How long do repairs take? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Most done same day—six hours max for screens, software; motherboards stretch to twenty-four hours.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Do you fix every brand? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Yeah, Samsung to Nokia, Mac to Dell. Bring it.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Are parts genuine? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">OEM or grade-A replacements—never knock-offs. Warranty sticks.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">What's your pricing rule? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">You get a quote first, pay after. No surprises.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">I’m outside Lekki—can I ship? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Pick-up and drop-off via GIG or courier, Lagos only, we cover cost.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Is data safe during repair? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">We back-up, wipe only if you say. Privacy lock.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Can I watch the fix live? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Grab a seat—glass counter lets you see every screw.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">What about water-damaged phones? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Three-day soak in IPA, logic board check—sixty percent revival rate.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Do you sell second-hand devices? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Refurbs with full battery health, tested twice.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Payment method? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">POS swipe, transfer, or cash. Split even.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Broken glass but phone works—do I need full screen? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Just glass swap if display's fine—cheaper.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Got lost, how to find you? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Agungi-Ajiran junction, blue sign, WhatsApp pin live.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">After-repair dies again—who pays? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Seven-day turnaround, no extra charge unless user fault.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Laptops running hot—fix it? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Repaste, fan clean, dust out—battery life jumps ten percent.</p>
-  </div>
-  <hr style="margin:1rem 0; border-color:#eee;">
-  
-  <div class="faq-item">
-    <h3 class="faq-question" style="font-size:1.2rem; font-weight:700; cursor:pointer; margin-bottom:0.5rem; position:relative;">Lost password on old Android—help? <span style="position:absolute; right:0;">+</span></h3>
-    <p class="faq-answer" style="display:none; padding:1rem; background:#f8f9fa; border-radius:8px;">Frp bypass, data stays, one hour.</p>
-  </div>
-</section>
+
+<script>
+(function () {
+
+    const faqItems = document.querySelectorAll(".cd-faq-item");
+    const faqButtons = document.querySelectorAll(".cd-faq-question");
+    const searchInput = document.getElementById("cdFaqSearch");
+    const categoryButtons = document.querySelectorAll(".cd-faq-category");
+    const noResults = document.getElementById("cdFaqNoResults");
+
+    let activeCategory = "all";
+
+
+    /* =====================================================
+       OPEN / CLOSE FAQ
+       ===================================================== */
+
+    faqButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const item = button.closest(".cd-faq-item");
+            const answer = item.querySelector(".cd-faq-answer");
+
+            const isOpen = item.classList.contains("open");
+
+
+            /* Close every other FAQ */
+
+            faqItems.forEach(function (otherItem) {
+
+                if (otherItem !== item) {
+
+                    otherItem.classList.remove("open");
+
+                    const otherAnswer =
+                        otherItem.querySelector(".cd-faq-answer");
+
+                    otherAnswer.style.maxHeight = null;
+
+                }
+
+            });
+
+
+            /* Toggle selected FAQ */
+
+            if (isOpen) {
+
+                item.classList.remove("open");
+                answer.style.maxHeight = null;
+
+            } else {
+
+                item.classList.add("open");
+                answer.style.maxHeight =
+                    answer.scrollHeight + "px";
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       CATEGORY FILTER
+       ===================================================== */
+
+    categoryButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            categoryButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            activeCategory = button.dataset.category;
+
+            filterFAQs();
+
+        });
+
+    });
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    searchInput.addEventListener("input", function () {
+
+        filterFAQs();
+
+    });
+
+
+    function filterFAQs() {
+
+        const searchText =
+            searchInput.value.trim().toLowerCase();
+
+        let visibleCount = 0;
+
+
+        faqItems.forEach(function (item) {
+
+            const question =
+                item.querySelector(
+                    ".cd-faq-question-text"
+                ).textContent.toLowerCase();
+
+            const answer =
+                item.querySelector(
+                    ".cd-faq-answer-inner"
+                ).textContent.toLowerCase();
+
+            const category =
+                item.dataset.category;
+
+
+            const matchesSearch =
+                question.includes(searchText) ||
+                answer.includes(searchText);
+
+            const matchesCategory =
+                activeCategory === "all" ||
+                category === activeCategory;
+
+
+            if (matchesSearch && matchesCategory) {
+
+                item.style.display = "";
+
+                visibleCount++;
+
+            } else {
+
+                item.style.display = "none";
+
+                item.classList.remove("open");
+
+                const answerBox =
+                    item.querySelector(".cd-faq-answer");
+
+                answerBox.style.maxHeight = null;
+
+            }
+
+        });
+
+
+        if (visibleCount === 0) {
+
+            noResults.classList.add("show");
+
+        } else {
+
+            noResults.classList.remove("show");
+
+        }
+
+    }
+
+
+})();
+</script>
 
 <a href="https://wa.me/07040363679?text=Hi%2C%20I'd%20like%20tech%20help" target="_blank" 
    style="position:fixed; bottom:15px; right:15px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 8px rgba(0,0,0,.2); text-decoration:none; font-size:2rem; z-index:100;">
