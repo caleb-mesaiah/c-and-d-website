@@ -50,19 +50,25 @@
 ========================= -->
 
 <!-- PREMIUM HEADER -->
+<!-- ==============================
+     PREMIUM C&D MULTITECH HEADER
+============================== -->
+
 <header class="premium-header">
 
   <div class="header-inner">
 
-    <!-- CND MULTITECH BRAND -->
+    <!-- BRAND -->
     <a href="index.html" class="brand-logo">
-      <span class="brand-cnd">C and D</span>
+      <span class="brand-cnd">C&amp;D</span>
       <span class="brand-multitech">Multitech</span>
     </a>
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
+
       <ul class="nav-links">
+
         <li><a href="index.html">Home</a></li>
         <li><a href="buy-sell-crypto.html">Trade</a></li>
         <li><a href="about.html">About</a></li>
@@ -70,9 +76,14 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="currencyconverter.html">Currency Converter</a></li>
         <li><a href="faq.html">FAQ</a></li>
+
       </ul>
 
-      <button class="nav-toggle" aria-label="Open menu">☰</button>
+      <!-- MOBILE MENU BUTTON -->
+      <button class="nav-toggle" aria-label="Open menu">
+        ☰
+      </button>
+
     </nav>
 
     <!-- DARK MODE -->
@@ -87,9 +98,9 @@
 
 <style>
 
-/* ==============================
+/* =========================================
    PREMIUM BLUE GLASS HEADER
-============================== */
+========================================= */
 
 .premium-header {
   position: sticky;
@@ -101,12 +112,14 @@
 
   margin: 12px auto 0;
 
+  box-sizing: border-box;
+
   background:
     linear-gradient(
       135deg,
-      rgba(0, 91, 210, 0.92),
-      rgba(0, 119, 255, 0.78),
-      rgba(0, 67, 160, 0.92)
+      rgba(0, 91, 210, 0.94),
+      rgba(0, 119, 255, 0.82),
+      rgba(0, 67, 160, 0.94)
     );
 
   backdrop-filter: blur(20px);
@@ -122,9 +135,12 @@
 }
 
 
-/* HEADER CONTENT */
+/* =========================================
+   HEADER INNER
+========================================= */
 
 .header-inner {
+  width: 100%;
   min-height: 82px;
 
   display: flex;
@@ -133,12 +149,14 @@
   gap: 20px;
 
   padding: 7px 18px;
+
+  box-sizing: border-box;
 }
 
 
-/* ==============================
-   CND MULTITECH LOGO
-============================== */
+/* =========================================
+   BRAND
+========================================= */
 
 .brand-logo {
   width: 145px;
@@ -146,12 +164,15 @@
 
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
   text-decoration: none;
 
   line-height: 1;
+
+  flex-shrink: 0;
 
   transition: transform 0.25s ease;
 }
@@ -161,10 +182,10 @@
 }
 
 
-/* BIG CND */
+/* BIG C&D */
 
 .brand-cnd {
-  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   font-size: 2.65rem;
 
@@ -186,7 +207,7 @@
 .brand-multitech {
   margin-top: 7px;
 
-  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   font-size: 0.85rem;
 
@@ -198,27 +219,29 @@
 
   line-height: 1;
 
-  text-transform: none;
-
   text-shadow:
     0 2px 5px rgba(0,0,0,0.25);
 }
 
 
-/* ==============================
+/* =========================================
    NAVIGATION
-============================== */
+========================================= */
 
 .main-nav {
-  flex: 1;
+  flex: 1 1 auto;
+
+  min-width: 0;
 
   display: flex;
 
-  justify-content: center;
+  align-items: center;
 
-  min-width: 0;
+  justify-content: center;
 }
 
+
+/* NAV LINKS */
 
 .nav-links {
   display: flex;
@@ -233,13 +256,20 @@
 
   padding: 0;
   margin: 0;
+
+  max-width: 100%;
 }
 
+
+/* NAV ITEM */
 
 .nav-links li {
   margin: 0;
+  padding: 0;
 }
 
+
+/* NAV TEXT */
 
 .nav-links a {
   display: block;
@@ -250,7 +280,7 @@
 
   text-decoration: none;
 
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   font-size: 0.87rem;
 
@@ -260,26 +290,38 @@
 
   border-radius: 9px;
 
-  transition: 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
+
+/* NAV HOVER */
 
 .nav-links a:hover {
   background: rgba(255,255,255,0.13);
 
   color: #f5d36b;
+
+  transform: translateY(-1px);
 }
 
 
-/* ==============================
-   DARK MODE
-============================== */
+/* =========================================
+   DARK MODE BUTTON
+========================================= */
 
 .mode-toggle {
   flex-shrink: 0;
 
   width: 42px;
   height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 
   border-radius: 50%;
 
@@ -293,6 +335,8 @@
 
   font-size: 1rem;
 
+  box-sizing: border-box;
+
   transition: 0.25s ease;
 }
 
@@ -301,27 +345,57 @@
 }
 
 
-/* ==============================
-   MOBILE MENU
-============================== */
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
 
 .nav-toggle {
-  display: flex;
-  position: relative;
-  margin-right: 30px;
-  flex-shrink: 0;
+  display: none;
+
   width: 42px;
   height: 42px;
+
+  flex-shrink: 0;
+
   align-items: center;
   justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.12);
+
+  color: #ffffff;
+
+  font-size: 1.3rem;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  line-height: 1;
+
+  transition: 0.25s ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(255,255,255,0.20);
 }
 
 
-/* ==============================
+/* =========================================
    TABLET
-============================== */
+========================================= */
 
 @media (max-width: 1100px) {
+
+  .header-inner {
+    gap: 12px;
+  }
 
   .nav-links a {
     padding: 10px 7px;
@@ -344,29 +418,49 @@
 }
 
 
-/* ==============================
+/* =========================================
    MOBILE
-============================== */
+========================================= */
 
 @media (max-width: 850px) {
 
   .premium-header {
     width: calc(100% - 16px);
+
     top: 8px;
-    margin-top: 8px;
+
+    margin: 8px auto 0;
+
     border-radius: 17px;
+
+    box-sizing: border-box;
+
+    overflow: visible;
   }
 
+
+  /* HEADER */
 
   .header-inner {
+    width: 100%;
+
     min-height: 70px;
-    padding: 6px 11px;
+
+    padding: 6px 10px;
+
+    gap: 8px;
+
+    box-sizing: border-box;
   }
 
+
+  /* BRAND */
 
   .brand-logo {
     width: 115px;
     min-width: 115px;
+
+    flex-shrink: 0;
   }
 
 
@@ -377,31 +471,50 @@
 
   .brand-multitech {
     font-size: 0.67rem;
+
     letter-spacing: 2.5px;
   }
 
 
-  .main-nav {
-  flex: 0 0 auto;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
+  /* NAV CONTAINER */
 
+  .main-nav {
+    flex: 0 0 auto;
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 42px;
+  }
+
+
+  /* MENU BUTTON */
 
   .nav-toggle {
-  display: flex;
-  position: relative;
-  margin-right: 8px;
-  flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  align-items: center;
-  justify-content: center;
-}
+    display: flex;
 
+    position: static;
+
+    margin: 0;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =====================================
+     MOBILE DROPDOWN
+  ===================================== */
 
   .nav-links {
+
     display: none;
 
     position: absolute;
@@ -416,11 +529,20 @@
 
     padding: 7px;
 
+    margin: 0;
+
     flex-direction: column;
 
     align-items: stretch;
 
-    background: rgba(0, 65, 155, 0.97);
+    gap: 2px;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(0, 71, 170, 0.98),
+        rgba(0, 105, 220, 0.97)
+      );
 
     backdrop-filter: blur(20px);
 
@@ -430,16 +552,22 @@
 
     border-radius: 15px;
 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    box-shadow:
+      0 15px 35px rgba(0,0,0,0.30);
   }
 
+
+  /* SHOW MENU */
 
   .nav-links.active {
     display: flex;
   }
 
 
+  /* MOBILE LINKS */
+
   .nav-links a {
+
     width: 100%;
 
     box-sizing: border-box;
@@ -448,38 +576,82 @@
 
     text-align: left;
 
+    font-family: Arial, Helvetica, sans-serif;
+
     font-size: 0.9rem;
 
     font-weight: 700;
+
+    color: #ffffff;
+
+    border-radius: 9px;
   }
 
 
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.13);
+
+    color: #f5d36b;
+
+    transform: none;
+  }
+
+
+  /* DARK MODE */
+
   .mode-toggle {
+
     width: 38px;
     height: 38px;
+
+    flex-shrink: 0;
+
+    font-size: 0.9rem;
   }
 
 }
 
 
-/* ==============================
+/* =========================================
    SMALL PHONES
-============================== */
+========================================= */
 
 @media (max-width: 430px) {
+
+  .header-inner {
+    padding: 6px 8px;
+
+    gap: 5px;
+  }
+
 
   .brand-logo {
     width: 100px;
     min-width: 100px;
   }
 
+
   .brand-cnd {
     font-size: 1.75rem;
   }
 
+
   .brand-multitech {
     font-size: 0.58rem;
+
     letter-spacing: 2px;
+  }
+
+
+  .nav-toggle {
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .mode-toggle {
+    width: 36px;
+    height: 36px;
   }
 
 }
@@ -489,23 +661,47 @@
 
 <script>
 
-/* MOBILE MENU */
+/* =========================================
+   MOBILE MENU
+========================================= */
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+if (navToggle && navLinks) {
 
+  navToggle.addEventListener("click", () => {
 
-/* CLOSE MENU AFTER CLICKING */
+    navLinks.classList.toggle("active");
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+    const isOpen = navLinks.classList.contains("active");
+
+    navToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close menu" : "Open menu"
+    );
+
   });
-});
+
+
+  /* CLOSE MENU AFTER CLICK */
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("active");
+
+      navToggle.setAttribute(
+        "aria-label",
+        "Open menu"
+      );
+
+    });
+
+  });
+
+}
 
 </script>
 
