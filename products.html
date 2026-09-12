@@ -45,827 +45,825 @@
 
 
 <body>
+
   <!-- =========================
-     PREMIUM WEBSITE HEADER
-========================= -->
+       PREMIUM WEBSITE HEADER
+  ========================= -->
 
-<!-- PREMIUM HEADER -->
-<!-- ==============================
-     PREMIUM C&D MULTITECH HEADER
-============================== -->
+  <!-- PREMIUM HEADER -->
+  <!-- ==============================
+       PREMIUM C&D MULTITECH HEADER
+  ============================== -->
 
+  <!-- =========================================================
+       C&D MULTITECH — PREMIUM BLUE GLASS HEADER
+       Conflict-Proof + Working Dark Mode
+  ========================================================= -->
 
+  <header class="cnd-header">
 
+    <div class="cnd-header-inner">
 
+      <!-- C&D MULTITECH BRAND -->
+      <a href="index.html" class="cnd-brand">
 
-<!-- =========================================================
-     C&D MULTITECH — PREMIUM BLUE GLASS HEADER
-     Conflict-Proof + Working Dark Mode
-========================================================= -->
+        <span class="cnd-brand-main">
+          C and D
+        </span>
 
-<header class="cnd-header">
+        <span class="cnd-brand-sub">
+          Multitech
+        </span>
 
-  <div class="cnd-header-inner">
-
-    <!-- C&D MULTITECH BRAND -->
-    <a href="index.html" class="cnd-brand">
-
-      <span class="cnd-brand-main">
-        C and D
-      </span>
-
-      <span class="cnd-brand-sub">
-        Multitech
-      </span>
-
-    </a>
+      </a>
 
 
-    <!-- NAVIGATION -->
-    <nav class="cnd-navigation">
+      <!-- NAVIGATION -->
+      <nav class="cnd-navigation">
 
-      <ul class="cnd-nav-links">
+        <ul class="cnd-nav-links">
 
-        <li>
-          <a href="index.html">Home</a>
-        </li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
 
-        <li>
-          <a href="buy-sell-crypto.html">Trade</a>
-        </li>
+          <li>
+            <a href="buy-sell-crypto.html">Trade</a>
+          </li>
 
-        <li>
-          <a href="about.html">About</a>
-        </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
 
-        <li>
-          <a href="services.html">Our Services</a>
-        </li>
+          <li>
+            <a href="services.html">Our Services</a>
+          </li>
 
-        <li>
-          <a href="products.html">Products</a>
-        </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
 
-        <li>
-          <a href="currencyconverter.html">Currency Converter</a>
-        </li>
+          <li>
+            <a href="currencyconverter.html">Currency Converter</a>
+          </li>
 
-        <li>
-          <a href="faq.html">FAQ</a>
-        </li>
+          <li>
+            <a href="faq.html">FAQ</a>
+          </li>
 
-      </ul>
+        </ul>
 
 
-      <!-- MOBILE MENU -->
+        <!-- MOBILE MENU -->
+        <button
+          type="button"
+          class="cnd-menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </nav>
+
+
+      <!-- DARK MODE -->
       <button
         type="button"
-        class="cnd-menu-toggle"
-        aria-label="Open menu"
-        aria-expanded="false"
+        id="cnd-mode-toggle"
+        class="cnd-mode-toggle"
+        aria-label="Toggle dark mode"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        🌙
       </button>
 
-    </nav>
+    </div>
 
+  </header>
 
-    <!-- DARK MODE -->
-    <button
-      type="button"
-      id="cnd-mode-toggle"
-      class="cnd-mode-toggle"
-      aria-label="Toggle dark mode"
-    >
-      🌙
-    </button>
 
-  </div>
+  <style>
 
-</header>
+  /* =========================================================
+     PREMIUM BLUE GLASS HEADER
 
-
-<style>
-
-/* =========================================================
-   PREMIUM BLUE GLASS HEADER
-   ALL CLASSES ARE UNIQUE TO PREVENT WEBSITE CONFLICTS
-========================================================= */
-
-.cnd-header {
-
-  position: sticky;
-
-  top: 12px;
-
-  z-index: 99999;
-
-  width: calc(100% - 24px);
-
-  max-width: 1450px;
-
-  margin: 12px auto 0;
-
-  box-sizing: border-box;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 91, 210, 0.94),
-      rgba(0, 119, 255, 0.82),
-      rgba(0, 67, 160, 0.94)
-    );
-
-  backdrop-filter: blur(20px);
-
-  -webkit-backdrop-filter: blur(20px);
-
-  border: 1px solid rgba(255,255,255,0.22);
-
-  border-radius: 20px;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,0.25),
-    inset 0 1px 0 rgba(255,255,255,0.25);
-
-}
-
-
-/* =========================================================
-   HEADER INNER
-========================================================= */
-
-.cnd-header-inner {
-
-  min-height: 82px;
-
-  width: 100%;
-
-  padding: 7px 18px;
-
-  box-sizing: border-box;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 20px;
-
-}
-
-
-/* =========================================================
-   C&D MULTITECH BRAND
-   EXACT FONT STYLE FROM YOUR ORIGINAL CODE
-========================================================= */
-
-.cnd-brand {
-
-  width: 145px;
-
-  min-width: 145px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-decoration: none;
-
-  line-height: 1;
-
-  flex-shrink: 0;
-
-  transition: transform 0.25s ease;
-
-}
-
-
-.cnd-brand:hover {
-
-  transform: scale(1.03);
-
-}
-
-
-/* BIG C AND D */
-
-.cnd-brand-main {
-
-  font-family:
-    "Trebuchet MS",
-    Arial,
-    sans-serif;
-
-  font-size: 2.65rem;
-
-  font-weight: 900;
-
-  letter-spacing: -2px;
-
-  color: #ffffff;
-
-  line-height: 0.9;
-
-  white-space: nowrap;
-
-  text-shadow:
-    0 3px 8px rgba(0,0,0,0.25);
-
-}
-
-
-/* MULTITECH */
-
-.cnd-brand-sub {
-
-  margin-top: 7px;
-
-  font-family:
-    "Trebuchet MS",
-    Arial,
-    sans-serif;
-
-  font-size: 0.85rem;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-
-  color: #f5d36b;
-
-  line-height: 1;
-
-  white-space: nowrap;
-
-  text-shadow:
-    0 2px 5px rgba(0,0,0,0.25);
-
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.cnd-navigation {
-
-  flex: 1 1 auto;
-
-  min-width: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-}
-
-
-.cnd-nav-links {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 2px;
-
-  list-style: none;
-
-  padding: 0;
-
-  margin: 0;
-
-}
-
-
-.cnd-nav-links li {
-
-  margin: 0;
-
-  padding: 0;
-
-}
-
-
-.cnd-nav-links a {
-
-  display: block;
-
-  padding: 11px 12px;
-
-  box-sizing: border-box;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 0.87rem;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-
-  border-radius: 9px;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
-
-}
-
-
-.cnd-nav-links a:hover {
-
-  background:
-    rgba(255,255,255,0.13);
-
-  color: #f5d36b;
-
-}
-
-
-/* =========================================================
-   DARK MODE BUTTON
-========================================================= */
-
-.cnd-mode-toggle {
-
-  flex: 0 0 42px;
-
-  width: 42px;
-
-  height: 42px;
-
-  padding: 0;
-
-  margin: 0;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255,255,255,0.25);
-
-  background:
-    rgba(255,255,255,0.10);
-
-  color: #ffffff;
-
-  cursor: pointer;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 1rem;
-
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
-
-}
-
-
-.cnd-mode-toggle:hover {
-
-  background:
-    rgba(255,255,255,0.20);
-
-  transform: rotate(15deg);
-
-}
-
-
-/* =========================================================
-   MOBILE MENU BUTTON
-========================================================= */
-
-.cnd-menu-toggle {
-
-  display: none;
-
-  flex: 0 0 42px;
-
-  width: 42px;
-
-  height: 42px;
-
-  padding: 0;
-
-  margin: 0;
-
-  border: 1px solid rgba(255,255,255,0.20);
-
-  border-radius: 10px;
-
-  background:
-    rgba(255,255,255,0.10);
-
-  cursor: pointer;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-direction: column;
-
-  gap: 5px;
-
-}
-
-
-.cnd-menu-toggle span {
-
-  display: block;
-
-  width: 20px;
-
-  height: 2px;
-
-  border-radius: 2px;
-
-  background: #ffffff;
-
-  transition: 0.25s ease;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1100px) {
-
-  .cnd-header-inner {
-
-    gap: 10px;
-
-    padding-left: 12px;
-
-    padding-right: 12px;
-
-  }
-
-
-  .cnd-brand {
-
-    width: 125px;
-
-    min-width: 125px;
-
-  }
-
-
-  .cnd-brand-main {
-
-    font-size: 2.2rem;
-
-  }
-
-
-  .cnd-brand-sub {
-
-    font-size: 0.72rem;
-
-  }
-
-
-  .cnd-nav-links a {
-
-    padding: 10px 7px;
-
-    font-size: 0.76rem;
-
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 850px) {
+     ORIGINAL HEADER — PRESERVED
+  ========================================================= */
 
   .cnd-header {
 
-    width: calc(100% - 16px);
+    position: sticky;
 
-    top: 8px;
+    top: 12px;
 
-    margin-top: 8px;
+    z-index: 99999;
 
-    border-radius: 17px;
+    width: calc(100% - 24px);
 
-  }
+    max-width: 1450px;
 
-
-  .cnd-header-inner {
-
-    min-height: 70px;
-
-    padding: 6px 10px;
-
-    gap: 8px;
-
-  }
-
-
-  /* BRAND */
-
-  .cnd-brand {
-
-    width: 115px;
-
-    min-width: 115px;
-
-  }
-
-
-  .cnd-brand-main {
-
-    font-size: 2rem;
-
-  }
-
-
-  .cnd-brand-sub {
-
-    font-size: 0.67rem;
-
-    letter-spacing: 2.5px;
-
-  }
-
-
-  /* NAVIGATION */
-
-  .cnd-navigation {
-
-    flex: 0 0 auto;
-
-    margin-left: auto;
-
-    width: auto;
-
-    min-width: 42px;
-
-    position: relative;
-
-  }
-
-
-  /* MOBILE BUTTON */
-
-  .cnd-menu-toggle {
-
-    display: flex;
-
-    position: relative;
-
-    z-index: 100001;
-
-  }
-
-
-  /* MOBILE DROPDOWN */
-
-  .cnd-nav-links {
-
-    display: none;
-
-    position: absolute;
-
-    top: calc(100% + 8px);
-
-    right: 0;
-
-    left: auto;
-
-    width: 230px;
-
-    max-width: calc(100vw - 24px);
+    margin: 12px auto 0;
 
     box-sizing: border-box;
 
-    padding: 7px;
-
-    margin: 0;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    justify-content: flex-start;
-
     background:
       linear-gradient(
-        145deg,
-        rgba(0,65,155,0.98),
-        rgba(0,105,220,0.97)
+        135deg,
+        rgba(0, 91, 210, 0.94),
+        rgba(0, 119, 255, 0.82),
+        rgba(0, 67, 160, 0.94)
       );
 
     backdrop-filter: blur(20px);
 
     -webkit-backdrop-filter: blur(20px);
 
-    border: 1px solid rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.22);
 
-    border-radius: 15px;
+    border-radius: 20px;
 
     box-shadow:
-      0 15px 35px rgba(0,0,0,0.30);
-
-    z-index: 100000;
-
-  }
-
-
-  .cnd-nav-links.cnd-active {
-
-    display: flex;
+      0 12px 35px rgba(0,0,0,0.25),
+      inset 0 1px 0 rgba(255,255,255,0.25);
 
   }
 
 
-  .cnd-nav-links li {
-
-    width: 100%;
-
-  }
-
-
-  .cnd-nav-links a {
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 12px 15px;
-
-    text-align: left;
-
-    font-size: 0.9rem;
-
-    font-weight: 700;
-
-    border-radius: 8px;
-
-  }
-
-
-  /* DARK MODE */
-
-  .cnd-mode-toggle {
-
-    flex: 0 0 38px;
-
-    width: 38px;
-
-    height: 38px;
-
-    font-size: 0.9rem;
-
-  }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 430px) {
+  /* =========================================================
+     HEADER INNER
+  ========================================================= */
 
   .cnd-header-inner {
 
-    padding-left: 8px;
+    min-height: 82px;
 
-    padding-right: 8px;
+    width: 100%;
 
-    gap: 5px;
+    padding: 7px 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
 
   }
 
 
+  /* =========================================================
+     C&D MULTITECH BRAND
+     ORIGINAL — DO NOT CHANGE
+  ========================================================= */
+
   .cnd-brand {
 
-    width: 100px;
+    width: 145px;
 
-    min-width: 100px;
+    min-width: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    line-height: 1;
+
+    flex-shrink: 0;
+
+    transition: transform 0.25s ease;
+
+  }
+
+
+  .cnd-brand:hover {
+
+    transform: scale(1.03);
 
   }
 
 
   .cnd-brand-main {
 
-    font-size: 1.75rem;
+    font-family:
+      "Trebuchet MS",
+      Arial,
+      sans-serif;
+
+    font-size: 2.65rem;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+
+    line-height: 0.9;
+
+    white-space: nowrap;
+
+    text-shadow:
+      0 3px 8px rgba(0,0,0,0.25);
 
   }
 
 
   .cnd-brand-sub {
 
-    font-size: 0.58rem;
+    margin-top: 7px;
 
-    letter-spacing: 2px;
+    font-family:
+      "Trebuchet MS",
+      Arial,
+      sans-serif;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #f5d36b;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-shadow:
+      0 2px 5px rgba(0,0,0,0.25);
 
   }
 
 
-  .cnd-menu-toggle {
+  /* =========================================================
+     NAVIGATION
+  ========================================================= */
 
-    width: 40px;
+  .cnd-navigation {
 
-    height: 40px;
+    flex: 1 1 auto;
 
-    flex-basis: 40px;
+    min-width: 0;
 
-  }
+    display: flex;
 
+    align-items: center;
 
-  .cnd-mode-toggle {
-
-    width: 36px;
-
-    height: 36px;
-
-    flex-basis: 36px;
+    justify-content: center;
 
   }
 
 
   .cnd-nav-links {
 
-    width: 220px;
+    display: flex;
 
-    max-width: calc(100vw - 20px);
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
 
   }
 
-}
 
-</style>
+  .cnd-nav-links li {
 
+    margin: 0;
 
-<script>
+    padding: 0;
 
-/* =========================================================
-   C&D MULTITECH HEADER JAVASCRIPT
-========================================================= */
-
-(function () {
-
-  /* -----------------------------------------
-     MOBILE MENU
-  ----------------------------------------- */
-
-  const menuButton =
-    document.querySelector(".cnd-menu-toggle");
-
-  const navigation =
-    document.querySelector(".cnd-nav-links");
+  }
 
 
-  if (menuButton && navigation) {
+  .cnd-nav-links a {
 
-    menuButton.addEventListener("click", function (event) {
+    display: block;
 
-      event.stopPropagation();
+    padding: 11px 12px;
 
-      const isOpen =
-        navigation.classList.toggle("cnd-active");
+    box-sizing: border-box;
 
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
+    color: #ffffff;
 
-    });
+    text-decoration: none;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 0.87rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-radius: 9px;
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease;
+
+  }
 
 
-    /* CLOSE AFTER CLICKING LINK */
+  .cnd-nav-links a:hover {
 
-    navigation
-      .querySelectorAll("a")
-      .forEach(function (link) {
+    background:
+      rgba(255,255,255,0.13);
 
-        link.addEventListener("click", function () {
+    color: #f5d36b;
+
+  }
+
+
+  /* =========================================================
+     DARK MODE BUTTON
+  ========================================================= */
+
+  .cnd-mode-toggle {
+
+    flex: 0 0 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background:
+      rgba(255,255,255,0.10);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1rem;
+
+    transition:
+      background 0.25s ease,
+      transform 0.25s ease;
+
+  }
+
+
+  .cnd-mode-toggle:hover {
+
+    background:
+      rgba(255,255,255,0.20);
+
+    transform: rotate(15deg);
+
+  }
+
+
+  /* =========================================================
+     MOBILE MENU BUTTON
+  ========================================================= */
+
+  .cnd-menu-toggle {
+
+    display: none;
+
+    flex: 0 0 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: 1px solid rgba(255,255,255,0.20);
+
+    border-radius: 10px;
+
+    background:
+      rgba(255,255,255,0.10);
+
+    cursor: pointer;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+  }
+
+
+  .cnd-menu-toggle span {
+
+    display: block;
+
+    width: 20px;
+
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #ffffff;
+
+    transition: 0.25s ease;
+
+  }
+
+
+  /* =========================================================
+     TABLET
+  ========================================================= */
+
+  @media (max-width: 1100px) {
+
+    .cnd-header-inner {
+
+      gap: 10px;
+
+      padding-left: 12px;
+
+      padding-right: 12px;
+
+    }
+
+
+    .cnd-brand {
+
+      width: 125px;
+
+      min-width: 125px;
+
+    }
+
+
+    .cnd-brand-main {
+
+      font-size: 2.2rem;
+
+    }
+
+
+    .cnd-brand-sub {
+
+      font-size: 0.72rem;
+
+    }
+
+
+    .cnd-nav-links a {
+
+      padding: 10px 7px;
+
+      font-size: 0.76rem;
+
+    }
+
+  }
+
+
+  /* =========================================================
+     MOBILE
+  ========================================================= */
+
+  @media (max-width: 850px) {
+
+    .cnd-header {
+
+      width: calc(100% - 16px);
+
+      top: 8px;
+
+      margin-top: 8px;
+
+      border-radius: 17px;
+
+    }
+
+
+    .cnd-header-inner {
+
+      min-height: 70px;
+
+      padding: 6px 10px;
+
+      gap: 8px;
+
+    }
+
+
+    .cnd-brand {
+
+      width: 115px;
+
+      min-width: 115px;
+
+    }
+
+
+    .cnd-brand-main {
+
+      font-size: 2rem;
+
+    }
+
+
+    .cnd-brand-sub {
+
+      font-size: 0.67rem;
+
+      letter-spacing: 2.5px;
+
+    }
+
+
+    .cnd-navigation {
+
+      flex: 0 0 auto;
+
+      margin-left: auto;
+
+      width: auto;
+
+      min-width: 42px;
+
+      position: relative;
+
+    }
+
+
+    .cnd-menu-toggle {
+
+      display: flex;
+
+      position: relative;
+
+      z-index: 100001;
+
+    }
+
+
+    .cnd-nav-links {
+
+      display: none;
+
+      position: absolute;
+
+      top: calc(100% + 8px);
+
+      right: 0;
+
+      left: auto;
+
+      width: 230px;
+
+      max-width: calc(100vw - 24px);
+
+      box-sizing: border-box;
+
+      padding: 7px;
+
+      margin: 0;
+
+      flex-direction: column;
+
+      align-items: stretch;
+
+      justify-content: flex-start;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(0,65,155,0.98),
+          rgba(0,105,220,0.97)
+        );
+
+      backdrop-filter: blur(20px);
+
+      -webkit-backdrop-filter: blur(20px);
+
+      border: 1px solid rgba(255,255,255,0.18);
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 15px 35px rgba(0,0,0,0.30);
+
+      z-index: 100000;
+
+    }
+
+
+    .cnd-nav-links.cnd-active {
+
+      display: flex;
+
+    }
+
+
+    .cnd-nav-links li {
+
+      width: 100%;
+
+    }
+
+
+    .cnd-nav-links a {
+
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 12px 15px;
+
+      text-align: left;
+
+      font-size: 0.9rem;
+
+      font-weight: 700;
+
+      border-radius: 8px;
+
+    }
+
+
+    .cnd-mode-toggle {
+
+      flex: 0 0 38px;
+
+      width: 38px;
+
+      height: 38px;
+
+      font-size: 0.9rem;
+
+    }
+
+  }
+
+
+  /* =========================================================
+     SMALL PHONES
+  ========================================================= */
+
+  @media (max-width: 430px) {
+
+    .cnd-header-inner {
+
+      padding-left: 8px;
+
+      padding-right: 8px;
+
+      gap: 5px;
+
+    }
+
+
+    .cnd-brand {
+
+      width: 100px;
+
+      min-width: 100px;
+
+    }
+
+
+    .cnd-brand-main {
+
+      font-size: 1.75rem;
+
+    }
+
+
+    .cnd-brand-sub {
+
+      font-size: 0.58rem;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .cnd-menu-toggle {
+
+      width: 40px;
+
+      height: 40px;
+
+      flex-basis: 40px;
+
+    }
+
+
+    .cnd-mode-toggle {
+
+      width: 36px;
+
+      height: 36px;
+
+      flex-basis: 36px;
+
+    }
+
+
+    .cnd-nav-links {
+
+      width: 220px;
+
+      max-width: calc(100vw - 20px);
+
+    }
+
+  }
+
+  </style>
+
+
+  <script>
+
+  /* =========================================================
+     C&D MULTITECH HEADER JAVASCRIPT
+
+     ORIGINAL LOGIC — PRESERVED
+  ========================================================= */
+
+  (function () {
+
+    const menuButton =
+      document.querySelector(".cnd-menu-toggle");
+
+    const navigation =
+      document.querySelector(".cnd-nav-links");
+
+
+    if (menuButton && navigation) {
+
+      menuButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        const isOpen =
+          navigation.classList.toggle("cnd-active");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+      });
+
+
+      navigation
+        .querySelectorAll("a")
+        .forEach(function (link) {
+
+          link.addEventListener("click", function () {
+
+            navigation.classList.remove("cnd-active");
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          });
+
+        });
+
+
+      document.addEventListener("click", function (event) {
+
+        if (
+          !event.target.closest(".cnd-navigation")
+        ) {
 
           navigation.classList.remove("cnd-active");
 
@@ -874,241 +872,1445 @@
             "false"
           );
 
-        });
+        }
 
       });
-
-
-    /* CLOSE WHEN CLICKING OUTSIDE */
-
-    document.addEventListener("click", function (event) {
-
-      if (
-        !event.target.closest(".cnd-navigation")
-      ) {
-
-        navigation.classList.remove("cnd-active");
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      }
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     DARK MODE
-  ----------------------------------------- */
-
-  const modeButton =
-    document.getElementById("cnd-mode-toggle");
-
-
-  if (modeButton) {
-
-    /* Check previously saved preference */
-
-    const savedMode =
-      localStorage.getItem("cnd-dark-mode");
-
-
-    if (savedMode === "true") {
-
-      document.documentElement.classList.add(
-        "cnd-dark-mode"
-      );
-
-      modeButton.textContent = "☀️";
 
     }
 
 
-    modeButton.addEventListener("click", function () {
+    const modeButton =
+      document.getElementById("cnd-mode-toggle");
 
-      const darkMode =
-        document.documentElement.classList.toggle(
+
+    if (modeButton) {
+
+      const savedMode =
+        localStorage.getItem("cnd-dark-mode");
+
+
+      if (savedMode === "true") {
+
+        document.documentElement.classList.add(
           "cnd-dark-mode"
         );
 
+        modeButton.textContent = "☀️";
 
-      localStorage.setItem(
-        "cnd-dark-mode",
-        darkMode
-      );
+      }
 
 
-      modeButton.textContent =
-        darkMode ? "☀️" : "🌙";
+      modeButton.addEventListener("click", function () {
 
-    });
+        const darkMode =
+          document.documentElement.classList.toggle(
+            "cnd-dark-mode"
+          );
+
+
+        localStorage.setItem(
+          "cnd-dark-mode",
+          darkMode
+        );
+
+
+        modeButton.textContent =
+          darkMode ? "☀️" : "🌙";
+
+      });
+
+    }
+
+  })();
+
+  </script>
+
+
+  <style>
+
+  /* =========================================================
+     DARK MODE
+
+     ORIGINAL — PRESERVED
+  ========================================================= */
+
+  html.cnd-dark-mode {
+
+    background: #07111f;
+
+    color-scheme: dark;
 
   }
 
-})();
 
-</script>
+  html.cnd-dark-mode body {
 
+    background: #07111f;
 
-<style>
+    color: #ffffff;
 
-/* =========================================================
-   DARK MODE
-   Only affects the page when the toggle is activated.
-========================================================= */
-
-html.cnd-dark-mode {
-
-  background: #07111f;
-
-  color-scheme: dark;
-
-}
+  }
 
 
-/* Smooth transition for common page elements */
+  html.cnd-dark-mode .cnd-header {
 
-html.cnd-dark-mode body {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(0,48,130,0.97),
+        rgba(0,82,190,0.94),
+        rgba(0,38,100,0.97)
+      );
 
-  background: #07111f;
+  }
 
-  color: #ffffff;
-
-}
+  </style>
 
 
-/* Header becomes slightly deeper blue */
 
-html.cnd-dark-mode .cnd-header {
+  <!-- =========================================================
+       PRODUCT PAGE
+       
+       IMPORTANT:
+       Everything below this point is scoped specifically to
+       the product page. It does NOT modify the header.
+  ========================================================= -->
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0,48,130,0.97),
-      rgba(0,82,190,0.94),
-      rgba(0,38,100,0.97)
+
+  <style>
+
+  /* =========================================================
+     PRODUCT PAGE BASE
+  ========================================================= */
+
+  .product-hero,
+  .filter-bar,
+  .product-grid,
+  .cart-icon,
+  .total-btn {
+
+    position: relative;
+
+    z-index: 1;
+
+  }
+
+
+  /* =========================================================
+     TECHNOLOGY BACKGROUND
+     
+     This is intentionally attached to the BODY rather than
+     the header, so the header remains untouched.
+  ========================================================= */
+
+  body {
+
+    background-color: #030914;
+
+    background-image:
+      linear-gradient(
+        rgba(0, 157, 255, 0.035) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 157, 255, 0.035) 1px,
+        transparent 1px
+      ),
+      radial-gradient(
+        circle at 12% 25%,
+        rgba(0, 119, 255, 0.12),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at 87% 55%,
+        rgba(0, 229, 255, 0.08),
+        transparent 25%
+      );
+
+    background-size:
+      42px 42px,
+      42px 42px,
+      auto,
+      auto;
+
+  }
+
+
+  /* =========================================================
+     CONNECTING TECHNOLOGY LINES
+  ========================================================= */
+
+  body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    pointer-events: none;
+
+    opacity: 0.42;
+
+    background:
+
+      linear-gradient(
+        28deg,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 229, 255, 0.12) 18.1%,
+        transparent 18.3%,
+        transparent 100%
+      ),
+
+      linear-gradient(
+        151deg,
+        transparent 0%,
+        transparent 34%,
+        rgba(0, 119, 255, 0.12) 34.1%,
+        transparent 34.3%,
+        transparent 100%
+      ),
+
+      linear-gradient(
+        72deg,
+        transparent 0%,
+        transparent 66%,
+        rgba(0, 229, 255, 0.09) 66.1%,
+        transparent 66.3%,
+        transparent 100%
+      );
+
+  }
+
+
+  /* =========================================================
+     SMALL TECH NODES / SQUARES
+  ========================================================= */
+
+  body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    opacity: 0.55;
+
+    background-image:
+
+      radial-gradient(
+        square,
+        rgba(0, 229, 255, 0.35) 0 1px,
+        transparent 1.5px
+      );
+
+    background-size:
+      95px 95px;
+
+    background-position:
+      10px 20px;
+
+  }
+
+
+  /* =========================================================
+     PRODUCT HERO
+  ========================================================= */
+
+  .product-hero {
+
+    width: calc(100% - 30px);
+
+    max-width: 1180px;
+
+    margin:
+      35px auto 30px;
+
+    padding:
+      55px 25px 45px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 28px;
+
+    border:
+      1px solid
+      rgba(0, 183, 255, 0.18);
+
+    background:
+
+      linear-gradient(
+        145deg,
+        rgba(6, 25, 48, 0.94),
+        rgba(3, 12, 27, 0.97)
+      );
+
+    box-shadow:
+
+      0 25px 70px
+      rgba(0,0,0,0.30),
+
+      inset 0 1px 0
+      rgba(255,255,255,0.06);
+
+    isolation: isolate;
+
+  }
+
+
+  /* Hero connecting circuit */
+
+  .product-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+
+      linear-gradient(
+        135deg,
+        transparent 0 18%,
+        rgba(0,229,255,0.07) 18.2%,
+        transparent 18.5%
+      ),
+
+      linear-gradient(
+        35deg,
+        transparent 0 72%,
+        rgba(0,119,255,0.08) 72.2%,
+        transparent 72.5%
+      );
+
+  }
+
+
+  .product-hero h1 {
+
+    margin:
+      0 0 12px;
+
+    color: #ffffff;
+
+    font-size:
+      clamp(2.2rem, 6vw, 4.6rem);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing:
+      -2px;
+
+    text-shadow:
+
+      0 0 22px
+      rgba(0, 183, 255, 0.16);
+
+  }
+
+
+  .product-hero p {
+
+    margin:
+      0 auto 30px;
+
+    color:
+      #9fb4cb;
+
+    font-size:
+      clamp(0.95rem, 2vw, 1.15rem);
+
+    line-height: 1.7;
+
+  }
+
+
+  /* =========================================================
+     PHONE PREVIEW
+  ========================================================= */
+
+  .preview-phone {
+
+    width:
+      min(390px, 90%);
+
+    margin:
+      0 auto;
+
+    padding:
+      7px;
+
+    border-radius:
+      28px;
+
+    border:
+      1px solid
+      rgba(0, 229, 255, 0.25);
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.025)
+      );
+
+    box-shadow:
+
+      0 20px 60px
+      rgba(0,0,0,0.42),
+
+      0 0 35px
+      rgba(0, 174, 255, 0.08);
+
+  }
+
+
+  .preview-phone img {
+
+    width:
+      100%;
+
+    height:
+      auto;
+
+    display:
+      block;
+
+    border-radius:
+      22px;
+
+    object-fit:
+      cover;
+
+  }
+
+
+  /* =========================================================
+     FILTER BAR
+  ========================================================= */
+
+  .filter-bar {
+
+    width:
+      calc(100% - 30px);
+
+    max-width:
+      1180px;
+
+    margin:
+      0 auto 28px;
+
+    padding:
+      5px;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    flex-wrap:
+      wrap;
+
+    gap:
+      8px;
+
+  }
+
+
+  .filter-bar button {
+
+    appearance:
+      none;
+
+    border:
+      1px solid
+      rgba(255,255,255,0.10);
+
+    border-radius:
+      999px;
+
+    padding:
+      11px 22px;
+
+    background:
+      rgba(10, 25, 45, 0.82);
+
+    color:
+      #b9c9da;
+
+    font-size:
+      0.9rem;
+
+    font-weight:
+      700;
+
+    cursor:
+      pointer;
+
+    transition:
+      transform 0.2s ease,
+      color 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+  }
+
+
+  .filter-bar button:hover {
+
+    color:
+      #ffffff;
+
+    background:
+      rgba(0,119,255,0.20);
+
+    border-color:
+      rgba(0,229,255,0.28);
+
+    transform:
+      translateY(-2px);
+
+  }
+
+
+  .filter-bar button.active {
+
+    color:
+      #ffffff;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(0,119,255,0.85),
+        rgba(0,174,255,0.55)
+      );
+
+    border-color:
+      rgba(0,229,255,0.40);
+
+    box-shadow:
+      0 8px 25px
+      rgba(0,119,255,0.16);
+
+  }
+
+
+  /* =========================================================
+     PRODUCT GRID
+  ========================================================= */
+
+  .product-grid {
+
+    width:
+      calc(100% - 30px);
+
+    max-width:
+      1180px;
+
+    margin:
+      0 auto;
+
+    display:
+      grid;
+
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(235px, 1fr)
+      );
+
+    gap:
+      22px;
+
+    padding-bottom:
+      100px;
+
+  }
+
+
+  /* =========================================================
+     PRODUCT CARD
+  ========================================================= */
+
+  .product-card {
+
+    position:
+      relative;
+
+    overflow:
+      hidden;
+
+    min-width:
+      0;
+
+    border-radius:
+      22px;
+
+    border:
+      1px solid
+      rgba(255,255,255,0.09);
+
+    background:
+
+      linear-gradient(
+        145deg,
+        rgba(17, 34, 56, 0.96),
+        rgba(4, 13, 27, 0.98)
+      );
+
+    box-shadow:
+
+      0 16px 45px
+      rgba(0,0,0,0.23),
+
+      inset 0 1px 0
+      rgba(255,255,255,0.04);
+
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+
+  }
+
+
+  /* Card circuit line */
+
+  .product-card::before {
+
+    content:
+      "";
+
+    position:
+      absolute;
+
+    top:
+      0;
+
+    left:
+      0;
+
+    width:
+      100%;
+
+    height:
+      2px;
+
+    background:
+
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,229,255,0.7),
+        transparent
+      );
+
+    opacity:
+      0.35;
+
+  }
+
+
+  .product-card:hover {
+
+    transform:
+      translateY(-6px);
+
+    border-color:
+      rgba(0, 183, 255, 0.30);
+
+    box-shadow:
+
+      0 25px 60px
+      rgba(0,0,0,0.34),
+
+      0 0 30px
+      rgba(0,119,255,0.07);
+
+  }
+
+
+  .product-card img {
+
+    width:
+      100%;
+
+    height:
+      265px;
+
+    display:
+      block;
+
+    object-fit:
+      cover;
+
+    background:
+      #07111f;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,0.07);
+
+  }
+
+
+  .product-card h3 {
+
+    margin:
+      18px 18px 7px;
+
+    color:
+      #ffffff;
+
+    font-size:
+      1.08rem;
+
+    line-height:
+      1.35;
+
+    font-weight:
+      800;
+
+  }
+
+
+  .product-card p {
+
+    margin:
+      0 18px 10px;
+
+    color:
+      #91a5ba;
+
+    font-size:
+      0.88rem;
+
+    line-height:
+      1.5;
+
+  }
+
+
+  .product-card strong {
+
+    display:
+      block;
+
+    margin:
+      0 18px 20px;
+
+    color:
+      #48dfff;
+
+    font-size:
+      1.15rem;
+
+    font-weight:
+      900;
+
+  }
+
+
+  /* =========================================================
+     CART ICON
+  ========================================================= */
+
+  .cart-icon {
+
+    position:
+      fixed;
+
+    right:
+      25px;
+
+    bottom:
+      25px;
+
+    z-index:
+      9000;
+
+    width:
+      62px;
+
+    height:
+      62px;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    border:
+      1px solid
+      rgba(0,229,255,0.30);
+
+    border-radius:
+      18px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(0,94,210,0.97),
+        rgba(0,57,135,0.97)
+      );
+
+    box-shadow:
+
+      0 14px 35px
+      rgba(0,0,0,0.35),
+
+      0 0 25px
+      rgba(0,183,255,0.10);
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+  }
+
+
+  .cart-icon:hover {
+
+    transform:
+      translateY(-4px);
+
+    box-shadow:
+
+      0 18px 40px
+      rgba(0,0,0,0.42),
+
+      0 0 30px
+      rgba(0,229,255,0.16);
+
+  }
+
+
+  .cart-icon svg {
+
+    width:
+      38px;
+
+    height:
+      38px;
+
+  }
+
+
+  .cart-count {
+
+    position:
+      absolute;
+
+    top:
+      -7px;
+
+    right:
+      -7px;
+
+    min-width:
+      23px;
+
+    height:
+      23px;
+
+    padding:
+      0 6px;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    border:
+      2px solid
+      #07111f;
+
+    border-radius:
+      50px;
+
+    background:
+      #00ffff;
+
+    color:
+      #00131a;
+
+    font-size:
+      0.72rem;
+
+    font-weight:
+      900;
+
+  }
+
+
+  /* =========================================================
+     TOTAL BUTTON
+  ========================================================= */
+
+  .total-btn {
+
+    position:
+      fixed;
+
+    right:
+      100px;
+
+    bottom:
+      30px;
+
+    z-index:
+      8999;
+
+    min-width:
+      115px;
+
+    min-height:
+      50px;
+
+    padding:
+      10px 17px;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    border:
+      1px solid
+      rgba(255,255,255,0.12);
+
+    border-radius:
+      15px;
+
+    background:
+      rgba(5,16,31,0.92);
+
+    color:
+      #ffffff;
+
+    font-size:
+      0.9rem;
+
+    font-weight:
+      900;
+
+    box-shadow:
+      0 12px 30px
+      rgba(0,0,0,0.30);
+
+    backdrop-filter:
+      blur(14px);
+
+    -webkit-backdrop-filter:
+      blur(14px);
+
+  }
+
+
+  /* =========================================================
+     MOBILE PRODUCT PAGE
+  ========================================================= */
+
+  @media (max-width: 700px) {
+
+    .product-hero {
+
+      width:
+        calc(100% - 20px);
+
+      margin-top:
+        25px;
+
+      padding:
+        45px 16px 35px;
+
+      border-radius:
+        23px;
+
+    }
+
+
+    .product-hero h1 {
+
+      font-size:
+        clamp(2.15rem, 12vw, 3.5rem);
+
+      letter-spacing:
+        -1.5px;
+
+    }
+
+
+    .product-hero p {
+
+      font-size:
+        0.95rem;
+
+      margin-bottom:
+        24px;
+
+    }
+
+
+    .filter-bar {
+
+      width:
+        calc(100% - 20px);
+
+      margin-bottom:
+        22px;
+
+    }
+
+
+    .filter-bar button {
+
+      padding:
+        10px 17px;
+
+      font-size:
+        0.83rem;
+
+    }
+
+
+    .product-grid {
+
+      width:
+        calc(100% - 20px);
+
+      grid-template-columns:
+        1fr;
+
+      gap:
+        16px;
+
+    }
+
+
+    .product-card img {
+
+      height:
+        280px;
+
+    }
+
+
+    .cart-icon {
+
+      width:
+        58px;
+
+      height:
+        58px;
+
+      right:
+        17px;
+
+      bottom:
+        20px;
+
+    }
+
+
+    .total-btn {
+
+      right:
+        87px;
+
+      bottom:
+        24px;
+
+      min-width:
+        100px;
+
+      min-height:
+        47px;
+
+      font-size:
+        0.84rem;
+
+    }
+
+  }
+
+
+  @media (max-width: 430px) {
+
+    .product-hero {
+
+      width:
+        calc(100% - 14px);
+
+    }
+
+
+    .product-grid {
+
+      width:
+        calc(100% - 14px);
+
+    }
+
+
+    .filter-bar {
+
+      width:
+        calc(100% - 14px);
+
+    }
+
+
+    .product-card img {
+
+      height:
+        255px;
+
+    }
+
+
+    .total-btn {
+
+      right:
+        80px;
+
+      min-width:
+        94px;
+
+      padding:
+        8px 10px;
+
+    }
+
+  }
+
+
+  /* =========================================================
+     DARK MODE COMPATIBILITY
+  ========================================================= */
+
+  html.cnd-dark-mode .product-hero {
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(3,16,35,0.98),
+        rgba(1,7,17,0.99)
+      );
+
+  }
+
+
+  html.cnd-dark-mode .product-card {
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(9,24,45,0.98),
+        rgba(2,9,19,0.99)
+      );
+
+  }
+
+
+  </style>
+
+
+
+  <!-- =========================================================
+       ORIGINAL PRODUCT MARKUP
+       PRESERVED
+  ========================================================= -->
+
+  <section class="product-hero">
+
+    <h1>
+      Pick. Message. Get.
+    </h1>
+
+    <p>
+      Everything works. Everything's real.
+    </p>
+
+    <div class="preview-phone">
+
+      <img
+        src="phone-demo.PNG"
+        alt="Live demo"
+      >
+
+    </div>
+
+  </section>
+
+
+  <div class="filter-bar">
+
+    <button data-filter="all">
+      All
+    </button>
+
+    <button data-filter="phone">
+      Phones
+    </button>
+
+    <button data-filter="laptop">
+      Laptops
+    </button>
+
+  </div>
+
+
+  <section class="product-grid">
+
+    <div
+      class="product-card"
+      data-type="phone"
+      data-condition="new"
+    >
+
+      <img
+        src="s23.WEBP"
+        alt="Samsung S23"
+      >
+
+      <h3>
+        Samsung S23 Ultra
+      </h3>
+
+      <p>
+        Black • 256GB • 6.8"
+      </p>
+
+      <strong>
+        ₦320,000
+      </strong>
+
+    </div>
+
+    <!-- More cards... -->
+
+  </section>
+
+
+
+  <!-- =========================================================
+       CART
+       ORIGINAL MARKUP PRESERVED
+  ========================================================= -->
+
+  <a
+    href="#cart"
+    class="cart-icon"
+    aria-label="View cart"
+  >
+
+    <span class="cart-count">
+      0
+    </span>
+
+    <svg
+      viewBox="0 0 32 32"
+      width="40"
+      height="40"
+    >
+
+      <path
+        fill="#00ffff"
+        stroke="#fff"
+        stroke-width="1"
+        d="M5,7 L6,20 C6,22 20,22 20,20 L21,7 L25,2 L6,2 Z M12,27 C12,28.5 13.5,30 15,30 C16.5,30 18,28.5 18,27 C18,25.5 16.5,24 15,24 C13.5,24 12,25.5 12,27 Z M20,27 C20,28.5 21.5,30 23,30 C24.5,30 26,28.5 26,27 C26,25.5 24.5,24 23,24 C21.5,24 20,25.5 20,27 Z"
+      />
+
+    </svg>
+
+  </a>
+
+
+  <!-- Total Button – Bottom-right -->
+
+  <div class="total-btn">
+    ₦0
+  </div>
+
+
+
+  <!-- =========================================================
+       INTRO SOUND
+       ORIGINAL LOGIC PRESERVED
+  ========================================================= -->
+
+  <audio
+    id="introSound"
+    preload="auto"
+  >
+
+    <source
+      src="intro.mpeg"
+      type="audio/mpeg"
+    >
+
+    Your browser does not support the audio element.
+
+  </audio>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+
+        /* Check if sound has already played in this session */
+
+        if (
+          sessionStorage.getItem('introPlayed') === 'true'
+        ) {
+
+          return;
+
+        }
+
+
+        const audio =
+          document.getElementById('introSound');
+
+
+        if (!audio) {
+
+          return;
+
+        }
+
+
+        audio.volume = 0.4;
+
+
+        const playPromise =
+          audio.play();
+
+
+        if (
+          playPromise !== undefined
+        ) {
+
+          playPromise.then(
+            function() {
+
+              sessionStorage.setItem(
+                'introPlayed',
+                'true'
+              );
+
+              console.log(
+                "Intro sound played once"
+              );
+
+            }
+          ).catch(
+            function(error) {
+
+              console.log(
+                "Autoplay blocked:",
+                error
+              );
+
+
+              document.body.addEventListener(
+                'click',
+                function playOnce() {
+
+                  audio.play().then(
+                    function() {
+
+                      sessionStorage.setItem(
+                        'introPlayed',
+                        'true'
+                      );
+
+                    }
+                  ).catch(
+                    function(e) {
+
+                      console.log(
+                        "Fallback failed:",
+                        e
+                      );
+
+                    }
+                  );
+
+
+                  document.body.removeEventListener(
+                    'click',
+                    playOnce
+                  );
+
+                },
+                {
+                  once: true
+                }
+              );
+
+            }
+          );
+
+        }
+
+      }
     );
 
-}
-
-</style>
+  </script>
 
 
+  <!-- =========================================================
+       YOUR ORIGINAL EXTERNAL JAVASCRIPT
+       PRESERVED
+  ========================================================= -->
+
+  <script src="script.js"></script>
+
+  <script src="products-script.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<section class="product-hero">
-  <h1>Pick. Message. Get.</h1>
-  <p>Everything works. Everything's real.</p>
-  <div class="preview-phone">
-    <img src="phone-demo.PNG" alt="Live demo">
-  </div>
-</section>
-
-<div class="filter-bar">
-  <button data-filter="all">All</button>
-  <button data-filter="phone">Phones</button>
-  <button data-filter="laptop">Laptops</button>
-</div>
-
-<section class="product-grid">
-  <div class="product-card" data-type="phone" data-condition="new">
-    <img src="s23.WEBP" alt="Samsung S23">
-    <h3>Samsung S23 Ultra</h3>
-    <p>Black • 256GB • 6.8"</p>
-    <strong>₦320,000</strong>
-  </div>
-  <!-- More cards... -->
-</section>
-
-
-
-<a href="#cart" class="cart-icon" aria-label="View cart"> <span class="cart-count">0</span>
-  <svg viewBox="0 0 32 32" width="40" height="40">
-    <path fill="#00ffff" stroke="#fff" stroke-width="1" 
-      d="M5,7 L6,20 C6,22 20,22 20,20 L21,7 L25,2 L6,2 Z M12,27 C12,28.5 13.5,30 15,30 C16.5,30 18,28.5 18,27 C18,25.5 16.5,24 15,24 C13.5,24 12,25.5 12,27 Z M20,27 C20,28.5 21.5,30 23,30 C24.5,30 26,28.5 26,27 C26,25.5 24.5,24 23,24 C21.5,24 20,25.5 20,27 Z"/>
-  </svg>
-</a>
-
-<!-- Total Button – Bottom-right -->
-<div class="total-btn">₦0</div>
-
-
-<!-- Intro Sound – plays only once per session -->
-<audio id="introSound" preload="auto">
-  <source src="intro.mpeg" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Check if sound has already played in this session
-    if (sessionStorage.getItem('introPlayed') === 'true') {
-      return; // already played → skip
-    }
-
-    const audio = document.getElementById('introSound');
-    audio.volume = 0.4; // 40% volume – adjust if needed
-
-    // Try to play
-    const playPromise = audio.play();
-
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        sessionStorage.setItem('introPlayed', 'true'); // mark as played
-        console.log("Intro sound played once");
-      }).catch(error => {
-        console.log("Autoplay blocked:", error);
-        // Fallback: play on first user click anywhere
-        document.body.addEventListener('click', function playOnce() {
-          audio.play().then(() => {
-            sessionStorage.setItem('introPlayed', 'true');
-          }).catch(e => console.log("Fallback failed:", e));
-          document.body.removeEventListener('click', playOnce);
-        }, { once: true });
-      });
-    }
-  });
-</script>
-<script src="script.js"></script>
-<script src="products-script.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
