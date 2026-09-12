@@ -19,36 +19,57 @@ app.post("/api/chat", async (req, res) => {
       });
     }
 
-    if (!process.env.OPENAI_API_KEY) {
+    // Check for OpenRouter API key
+    if (!process.env.OPENROUTER_API_KEY) {
       return res.status(500).json({
-        error: "OPENAI_API_KEY is not configured"
+        error: "OPENROUTER_API_KEY is not configured"
       });
     }
 
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: "gpt-5.6-luna",
-        input: messages
-      })
-    });
+    // Send request to OpenRouter
+    const response = await fetch(
+      "https://openrouter.ai/api/v1/chat/completions",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+          "HTTP-Referer": "https://cali-ai.onrender.com",
+          "X-Title": "Cali AI - C & D Multitech"
+        },
+
+        body: JSON.stringify({
+          model: "openrouter/free",
+          messages: messages,
+          temperature: 0.6,
+          max_tokens: 550
+        })
+      }
+    );
 
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("OpenAI error:", data);
+      console.error("OpenRouter error:", data);
 
       return res.status(response.status).json({
-        error: "OpenAI request failed"
+        error: data?.error?.message || "OpenRouter request failed"
+      });
+    }
+
+    const reply = data?.choices?.[0]?.message?.content;
+
+    if (!reply) {
+      console.error("OpenRouter returned no reply:", data);
+
+      return res.status(500).json({
+        error: "OpenRouter returned an empty response"
       });
     }
 
     res.json({
-      reply: data.output_text || "Sorry, I couldn't generate a response."
+      reply: reply
     });
 
   } catch (error) {
@@ -64,10 +85,11 @@ app.post("/api/chat", async (req, res) => {
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    apiKeyConfigured: !!process.env.OPENAI_API_KEY
+    apiKeyConfigured: !!process.env.OPENROUTER_API_KEY
   });
 });
 
+// Start server
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Cali AI running on port ${PORT}`);
 });
