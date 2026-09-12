@@ -1349,10 +1349,11 @@ html.cnd-dark-mode .cnd-header {
  
 
 
-<!-- ==================== CALI AI – CLEAN UPGRADED VERSION ==================== -->
+<!-- ==================== CALI AI – SINGLE FILE ==================== -->
+
 <style>
   :root {
-    --cali-ai-primary: #6d28d9;          /* Purple accent */
+    --cali-ai-primary: #6d28d9;
     --cali-ai-primary-dark: #4c1d95;
     --cali-ai-bg: rgba(255, 255, 255, 0.96);
     --cali-ai-text: #1a1a1a;
@@ -1360,7 +1361,6 @@ html.cnd-dark-mode .cnd-header {
     --cali-ai-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   }
 
-  /* ===== Floating Chat Icon (Animated) ===== */
   .cali-ai-fab {
     position: fixed;
     bottom: 90px;
@@ -1379,10 +1379,12 @@ html.cnd-dark-mode .cnd-header {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     animation: caliAiPulse 2.4s infinite ease-in-out;
   }
+
   .cali-ai-fab:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 30px rgba(109, 40, 217, 0.6);
   }
+
   .cali-ai-fab svg {
     width: 28px;
     height: 28px;
@@ -1390,12 +1392,19 @@ html.cnd-dark-mode .cnd-header {
   }
 
   @keyframes caliAiPulse {
-    0%   { box-shadow: 0 0 0 0 rgba(109, 40, 217, 0.5); }
-    70%  { box-shadow: 0 0 0 16px rgba(109, 40, 217, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(109, 40, 217, 0); }
+    0% {
+      box-shadow: 0 0 0 0 rgba(109, 40, 217, 0.5);
+    }
+
+    70% {
+      box-shadow: 0 0 0 16px rgba(109, 40, 217, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(109, 40, 217, 0);
+    }
   }
 
-  /* ===== Chat Panel ===== */
   .cali-ai-panel {
     position: fixed;
     bottom: 170px;
@@ -1414,8 +1423,10 @@ html.cnd-dark-mode .cnd-header {
     display: none;
     flex-direction: column;
     overflow: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
   }
+
   .cali-ai-panel.cali-ai-open {
     display: flex;
   }
@@ -1428,15 +1439,18 @@ html.cnd-dark-mode .cnd-header {
     align-items: center;
     justify-content: space-between;
   }
+
   .cali-ai-header-title {
     font-weight: 600;
     font-size: 16.5px;
   }
+
   .cali-ai-header-sub {
     font-size: 12px;
     opacity: 0.9;
     margin-top: 2px;
   }
+
   .cali-ai-close {
     background: transparent;
     border: none;
@@ -1446,7 +1460,6 @@ html.cnd-dark-mode .cnd-header {
     line-height: 1;
   }
 
-  /* Quick Menu */
   .cali-ai-menu {
     display: flex;
     flex-wrap: wrap;
@@ -1455,6 +1468,7 @@ html.cnd-dark-mode .cnd-header {
     background: #f8fafc;
     border-bottom: 1px solid var(--cali-ai-border);
   }
+
   .cali-ai-menu-btn {
     background: white;
     border: 1px solid #e2e8f0;
@@ -1465,6 +1479,7 @@ html.cnd-dark-mode .cnd-header {
     color: #1e293b;
     transition: all 0.15s;
   }
+
   .cali-ai-menu-btn:hover {
     background: #6d28d9;
     color: white;
@@ -1486,14 +1501,16 @@ html.cnd-dark-mode .cnd-header {
     border-radius: 16px;
     font-size: 14.5px;
     line-height: 1.55;
-    white-space: pre-wrap; /* keeps paragraphs */
+    white-space: pre-wrap;
   }
+
   .cali-ai-msg-user {
     align-self: flex-end;
     background: #6d28d9;
     color: white;
     border-bottom-right-radius: 5px;
   }
+
   .cali-ai-msg-ai {
     align-self: flex-start;
     background: #f1f5f9;
@@ -1506,8 +1523,9 @@ html.cnd-dark-mode .cnd-header {
     border-top: 1px solid var(--cali-ai-border);
     display: flex;
     gap: 8px;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255, 255, 255, 0.85);
   }
+
   .cali-ai-input {
     flex: 1;
     border: 1px solid #e2e8f0;
@@ -1516,9 +1534,11 @@ html.cnd-dark-mode .cnd-header {
     font-size: 14.5px;
     outline: none;
   }
+
   .cali-ai-input:focus {
     border-color: #6d28d9;
   }
+
   .cali-ai-send {
     background: #6d28d9;
     color: white;
@@ -1529,6 +1549,7 @@ html.cnd-dark-mode .cnd-header {
     cursor: pointer;
     font-weight: 500;
   }
+
   .cali-ai-send:disabled {
     opacity: 0.55;
     cursor: not-allowed;
@@ -1540,6 +1561,7 @@ html.cnd-dark-mode .cnd-header {
     font-size: 11.5px;
     color: #64748b;
   }
+
   .cali-ai-whatsapp {
     display: inline-block;
     margin-top: 5px;
@@ -1559,6 +1581,7 @@ html.cnd-dark-mode .cnd-header {
       width: calc(100vw - 20px);
       height: 65vh;
     }
+
     .cali-ai-fab {
       right: 16px;
       bottom: 80px;
@@ -1566,56 +1589,89 @@ html.cnd-dark-mode .cnd-header {
   }
 </style>
 
-<!-- Floating Animated Chat Icon -->
-<button class="cali-ai-fab" id="caliAiFab" title="Chat with Cali AI" aria-label="Open Cali AI">
-  <!-- Modern Chat Bubble Icon -->
+<button class="cali-ai-fab" id="caliAiFab" title="Chat with Cali AI">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/>
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/>
     <circle cx="8" cy="10" r="1.2"/>
     <circle cx="12" cy="10" r="1.2"/>
     <circle cx="16" cy="10" r="1.2"/>
   </svg>
 </button>
 
-<!-- Chat Panel -->
 <div class="cali-ai-panel" id="caliAiPanel">
+
   <div class="cali-ai-header">
     <div>
       <div class="cali-ai-header-title">Cali AI</div>
       <div class="cali-ai-header-sub">C & D Multitech • Lekki</div>
     </div>
+
     <button class="cali-ai-close" id="caliAiClose">×</button>
   </div>
 
   <div class="cali-ai-menu" id="caliAiMenu">
-    <button class="cali-ai-menu-btn" data-action="diagnose">Diagnose Issue</button>
-    <button class="cali-ai-menu-btn" data-action="book">Book Repair</button>
-    <button class="cali-ai-menu-btn" data-action="services">Our Services</button>
-    <button class="cali-ai-menu-btn" data-action="location">Location</button>
-    <button class="cali-ai-menu-btn" data-action="human">Talk to Human</button>
+    <button class="cali-ai-menu-btn" data-action="diagnose">
+      Diagnose Issue
+    </button>
+
+    <button class="cali-ai-menu-btn" data-action="book">
+      Book Repair
+    </button>
+
+    <button class="cali-ai-menu-btn" data-action="services">
+      Our Services
+    </button>
+
+    <button class="cali-ai-menu-btn" data-action="location">
+      Location
+    </button>
+
+    <button class="cali-ai-menu-btn" data-action="human">
+      Talk to Human
+    </button>
   </div>
 
   <div class="cali-ai-messages" id="caliAiMessages"></div>
 
   <div class="cali-ai-input-area">
-    <input type="text" class="cali-ai-input" id="caliAiInput" placeholder="Type your message..." autocomplete="off">
-    <button class="cali-ai-send" id="caliAiSend">Send</button>
+    <input
+      type="text"
+      class="cali-ai-input"
+      id="caliAiInput"
+      placeholder="Type your message..."
+      autocomplete="off"
+    >
+
+    <button class="cali-ai-send" id="caliAiSend">
+      Send
+    </button>
   </div>
 
   <div class="cali-ai-footer">
     C & D Multitech • Lekki
     <br>
-    <a href="https://wa.me/2347040363679" target="_blank" class="cali-ai-whatsapp">
+
+    <a
+      href="https://wa.me/2347040363679"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cali-ai-whatsapp"
+    >
       Chat on WhatsApp
     </a>
   </div>
+
 </div>
 
 <script>
-(function() {
-  const CALI_AI_KEY = "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";
-  const CALI_AI_MODEL = "openrouter/free";
-  const CALI_AI_WHATSAPP = "2347040363679";
+(function () {
+
+  /*
+   * SECURITY:
+   * The OpenAI API key is NOT placed here.
+   * This browser code talks to your Render server.
+   */
+  const CALI_AI_PROXY = "https://cali-ai.onrender.com/api/chat";
 
   const CALI_AI_SYSTEM = `You are Cali AI, the official assistant of C and D Multitech in Lekki, Lagos.
 
@@ -1626,21 +1682,24 @@ Email: Canddmultitech@gmail.com
 
 Services: iPhone & Android repairs, screen replacement, water damage, board repair, laptop repair, data recovery, software fixes, genuine parts, website development.
 
-Personality: Friendly, calm, professional and helpful. Speak like a good staff member.
+Personality: Friendly, calm, professional and helpful.
 
-Important reply rules:
+Reply rules:
 - Keep replies clear and easy to read
 - Use short paragraphs
 - Be straight to the point but still helpful
 - Avoid long walls of text
-- Use bullet points only when they make things clearer
-- When booking, collect Name, Device, Issue, Preferred time, then give a clean WhatsApp message format
-
-Always stay helpful and honest.`;
+- When booking, collect Name, Device, Issue, Preferred time, then give a clean WhatsApp message format`;
 
   let caliAiMessages = [
-    { role: "system", content: CALI_AI_SYSTEM },
-    { role: "assistant", content: "Hi, I’m Cali AI from C & D Multitech.\n\nHow can I help you today?" }
+    {
+      role: "system",
+      content: CALI_AI_SYSTEM
+    },
+    {
+      role: "assistant",
+      content: "Hi, I’m Cali AI from C & D Multitech.\n\nHow can I help you today?"
+    }
   ];
 
   const fab = document.getElementById("caliAiFab");
@@ -1653,36 +1712,68 @@ Always stay helpful and honest.`;
 
   function addMessage(role, text) {
     const div = document.createElement("div");
-    div.className = `cali-ai-msg ${role === "user" ? "cali-ai-msg-user" : "cali-ai-msg-ai"}`;
+
+    div.className =
+      "cali-ai-msg " +
+      (role === "user"
+        ? "cali-ai-msg-user"
+        : "cali-ai-msg-ai");
+
     div.textContent = text;
+
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
 
   function renderHistory() {
     messagesDiv.innerHTML = "";
-    caliAiMessages.forEach(m => {
-      if (m.role !== "system") addMessage(m.role, m.content);
+
+    caliAiMessages.forEach(function (message) {
+      if (message.role !== "system") {
+        addMessage(message.role, message.content);
+      }
     });
   }
 
-  fab.addEventListener("click", () => {
+  fab.addEventListener("click", function () {
     panel.classList.add("cali-ai-open");
     input.focus();
   });
-  closeBtn.addEventListener("click", () => {
+
+  closeBtn.addEventListener("click", function () {
     panel.classList.remove("cali-ai-open");
   });
 
-  menu.addEventListener("click", (e) => {
-    if (!e.target.classList.contains("cali-ai-menu-btn")) return;
+  menu.addEventListener("click", function (e) {
+
+    if (!e.target.classList.contains("cali-ai-menu-btn")) {
+      return;
+    }
+
     const action = e.target.dataset.action;
+
     let prompt = "";
-    if (action === "diagnose") prompt = "I want to diagnose a device problem.";
-    if (action === "book") prompt = "I want to book a repair appointment.";
-    if (action === "services") prompt = "What services do you offer?";
-    if (action === "location") prompt = "Where is your shop located?";
-    if (action === "human") prompt = "I want to speak to a human.";
+
+    if (action === "diagnose") {
+      prompt = "I want to diagnose a device problem.";
+    }
+
+    if (action === "book") {
+      prompt = "I want to book a repair appointment.";
+    }
+
+    if (action === "services") {
+      prompt = "What services do you offer?";
+    }
+
+    if (action === "location") {
+      prompt = "Where is your shop located?";
+    }
+
+    if (action === "human") {
+      prompt = "I want to speak to a human.";
+    }
+
     if (prompt) {
       input.value = prompt;
       sendMessage();
@@ -1690,54 +1781,98 @@ Always stay helpful and honest.`;
   });
 
   async function sendMessage() {
+
     const text = input.value.trim();
-    if (!text) return;
+
+    if (!text) {
+      return;
+    }
 
     input.value = "";
     sendBtn.disabled = true;
 
-    caliAiMessages.push({ role: "user", content: text });
+    caliAiMessages.push({
+      role: "user",
+      content: text
+    });
+
     addMessage("user", text);
 
     const thinking = document.createElement("div");
-    thinking.className = "cali-ai-msg cali-ai-msg-ai";
+
+    thinking.className =
+      "cali-ai-msg cali-ai-msg-ai";
+
     thinking.textContent = "Cali is typing...";
     thinking.id = "caliAiThinking";
+
     messagesDiv.appendChild(thinking);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
     try {
-      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+
+      const response = await fetch(CALI_AI_PROXY, {
         method: "POST",
+
         headers: {
-          "Authorization": `Bearer ${CALI_AI_KEY}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": "https://canddmultitech.com.ng",
-          "X-Title": "Cali AI"
+          "Content-Type": "application/json"
         },
+
         body: JSON.stringify({
-          model: CALI_AI_MODEL,
-          messages: caliAiMessages,
-          temperature: 0.6,
-          max_tokens: 550
+          messages: caliAiMessages
         })
       });
 
       const data = await response.json();
-      const thinkingEl = document.getElementById("caliAiThinking");
-      if (thinkingEl) thinkingEl.remove();
 
-      if (data.choices?.[0]?.message) {
-        const reply = data.choices[0].message.content;
-        caliAiMessages.push({ role: "assistant", content: reply });
-        addMessage("assistant", reply);
-      } else {
-        addMessage("assistant", "Sorry, something went wrong. Please try again or message us on WhatsApp.");
+      const thinkingEl =
+        document.getElementById("caliAiThinking");
+
+      if (thinkingEl) {
+        thinkingEl.remove();
       }
-    } catch (err) {
-      const thinkingEl = document.getElementById("caliAiThinking");
-      if (thinkingEl) thinkingEl.remove();
-      addMessage("assistant", "Connection issue. Please try again or use WhatsApp.");
+
+      if (!response.ok) {
+        throw new Error(
+          data.error || "Request failed"
+        );
+      }
+
+      if (data.reply) {
+
+        caliAiMessages.push({
+          role: "assistant",
+          content: data.reply
+        });
+
+        addMessage(
+          "assistant",
+          data.reply
+        );
+
+      } else {
+
+        addMessage(
+          "assistant",
+          "Sorry, something went wrong. Please try again or message us on WhatsApp."
+        );
+      }
+
+    } catch (error) {
+
+      console.error("Cali AI error:", error);
+
+      const thinkingEl =
+        document.getElementById("caliAiThinking");
+
+      if (thinkingEl) {
+        thinkingEl.remove();
+      }
+
+      addMessage(
+        "assistant",
+        "Connection issue. Please try again or use WhatsApp."
+      );
     }
 
     sendBtn.disabled = false;
@@ -1745,13 +1880,20 @@ Always stay helpful and honest.`;
   }
 
   sendBtn.addEventListener("click", sendMessage);
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") sendMessage();
+
+  input.addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+
   });
 
   renderHistory();
+
 })();
 </script>
+
 <!-- ==================== CALI AI – END ==================== -->
 
 
